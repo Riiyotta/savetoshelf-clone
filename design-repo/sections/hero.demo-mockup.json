@@ -1,0 +1,343 @@
+{
+  "id": "hero.demo-mockup",
+  "kind": "section",
+  "contractVersion": "1.0.0",
+  "category": "hero",
+  "pageOrder": 3,
+  "purpose": "Fake Shelf app UI on a fixed 1440x820 canvas scaled to its container: sidebar with counts, greeting, paste box, four recent-save cards, and the hero search palette auto-typing a natural-language question over the top.",
+  "anchorId": null,
+  "variants": [
+    "default"
+  ],
+  "implementedBy": "src/components/HeroMockup.jsx",
+  "measuredFrom": [
+    {
+      "cite": "src/components/HeroMockup.jsx:45-170",
+      "quote": "data-demo=\"\""
+    },
+    {
+      "cite": "CLONE_SPEC.md:235-279",
+      "quote": "### 3.2 Demo app mockup (scaled 1440-wide fake UI)"
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollow": "hero.intro",
+    "groupedIn": "bookmarkHeader"
+  },
+  "contentSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "ariaLabel",
+      "topBarLogo",
+      "avatarInitial",
+      "sidebarPrimary",
+      "collectionsHeading",
+      "collections",
+      "sourcesHeading",
+      "sources",
+      "greeting",
+      "greetingSub",
+      "pastePrompt",
+      "pasteShortcut",
+      "recentTitle",
+      "recentSub",
+      "cards",
+      "palette"
+    ],
+    "properties": {
+      "ariaLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 84,
+        "x-realMaxWords": 67
+      },
+      "topBarLogo": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "assetRole"
+        ],
+        "properties": {
+          "assetRole": {
+            "enum": [
+              "brand.logo-mark",
+              "brand.placeholder-mark"
+            ]
+          }
+        }
+      },
+      "avatarInitial": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1,
+        "x-maxWords": 1,
+        "x-realMaxWords": 1
+      },
+      "sidebarPrimary": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 3,
+              "x-realMaxWords": 2
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "active": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "collectionsHeading": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2,
+        "x-realMaxWords": 1
+      },
+      "collections": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "count"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 3,
+              "x-realMaxWords": 2
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      },
+      "sourcesHeading": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2,
+        "x-realMaxWords": 1
+      },
+      "sources": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "colorToken",
+            "count"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 2,
+              "x-realMaxWords": 1
+            },
+            "colorToken": {
+              "$ref": "#/definitions/sourceDotColorToken"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      },
+      "greeting": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3,
+        "x-realMaxWords": 2
+      },
+      "greetingSub": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 15,
+        "x-realMaxWords": 12
+      },
+      "pastePrompt": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 9,
+        "x-realMaxWords": 7
+      },
+      "pasteShortcut": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2,
+        "x-realMaxWords": 1
+      },
+      "recentTitle": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4,
+        "x-realMaxWords": 3
+      },
+      "recentSub": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 9,
+        "x-realMaxWords": 7
+      },
+      "cards": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "sourceLabel",
+            "day",
+            "title",
+            "note",
+            "thumb"
+          ],
+          "properties": {
+            "sourceLabel": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 2,
+              "x-realMaxWords": 1
+            },
+            "day": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 2,
+              "x-realMaxWords": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 7,
+              "x-realMaxWords": 5
+            },
+            "note": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 9,
+              "x-realMaxWords": 7
+            },
+            "thumb": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "assetRole",
+                "colorToken"
+              ],
+              "properties": {
+                "assetRole": {
+                  "const": "mockup.thumbnail-color-block"
+                },
+                "colorToken": {
+                  "$ref": "#/definitions/thumbColorToken"
+                }
+              }
+            }
+          }
+        }
+      },
+      "palette": {
+        "$ref": "#/definitions/searchPaletteHero"
+      }
+    }
+  },
+  "motionSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "pattern",
+      "secondary",
+      "reducedMotionFallback"
+    ],
+    "properties": {
+      "pattern": {
+        "enum": [
+          "static-scaled-canvas"
+        ]
+      },
+      "secondary": {
+        "const": [
+          "palette-autotype"
+        ]
+      },
+      "reducedMotionFallback": {
+        "const": "palette-full-text-chips-hits-no-loop"
+      }
+    }
+  },
+  "motion": {
+    "pattern": "static-scaled-canvas",
+    "secondary": [
+      "palette-autotype"
+    ],
+    "reducedMotionFallback": "palette-full-text-chips-hits-no-loop",
+    "evidence": [
+      {
+        "cite": "src/components/Palette.jsx:71-99",
+        "quote": "M.classList.add('is-open')"
+      },
+      {
+        "cite": "src/components/Palette.jsx:54-59",
+        "quote": "if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {"
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "breakpoint": "breakpoint.base",
+      "target": "[data-demo-scale]",
+      "change": "canvas fixed 1440x820, transform: scale(container/1440): .9375 @1440, .4708 @768, .2361 @390",
+      "evidence": [
+        {
+          "cite": "src/components/HeroMockup.jsx:36-38",
+          "quote": "t.style.transform = `scale(${e.clientWidth / 1440})`"
+        },
+        {
+          "cite": "CLONE_SPEC.md:594",
+          "quote": "demo box | 1352×770, scale .9375"
+        }
+      ]
+    },
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "wrapper",
+      "change": "padding 0 32px 32px at 640px+, 0 16px 16px below",
+      "evidence": [
+        {
+          "cite": "src/components/HeroMockup.jsx:46",
+          "quote": "px-4 pb-4 sm:px-8 sm:pb-8"
+        }
+      ]
+    }
+  ],
+  "accessibility": "role=img with a long aria-label describing the app; inner UI is decorative. The scrim layer is never activated by any script (CLONE_SPEC.md:267) and is kept inert.",
+  "notes": [
+    "Thumbnails are CSS colour blocks (asset role mockup.thumbnail-color-block); no screenshots exist on the original."
+  ]
+}

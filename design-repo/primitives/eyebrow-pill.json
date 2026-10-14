@@ -1,0 +1,29 @@
+{
+  "id": "primitive.eyebrow-pill",
+  "kind": "primitive",
+  "contractVersion": "1.0.0",
+  "purpose": "Squircle pill with an 18px icon + 14px semibold label; tones sunken (hero) and accent (funnel, saving).",
+  "implementedBy": "src/components/Eyebrow.jsx",
+  "tokens": [
+    "component.eyebrow.bg-sunken",
+    "component.eyebrow.bg-accent",
+    "component.eyebrow.radius",
+    "typography.letterSpacing.eyebrow",
+    "iconSize.eyebrow"
+  ],
+  "props": [
+    "label",
+    "icon",
+    "tone"
+  ],
+  "variants": [
+    "sunken",
+    "accent"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Eyebrow.jsx:5-15",
+      "quote": "const bg = tone === 'sunken' ? 'bg-surface-sunken' : 'bg-accent'"
+    }
+  ]
+}

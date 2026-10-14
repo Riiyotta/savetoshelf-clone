@@ -1,0 +1,195 @@
+{
+  "id": "story.why-funnel",
+  "kind": "section",
+  "contractVersion": "1.0.0",
+  "category": "story",
+  "pageOrder": 4,
+  "purpose": "'Why Shelf' problem statement pinned at 40% viewport while the header's bottom edge morphs from an upward chevron into a downward bookmark tail; twelve source tags drop under matter-js physics and pile on the V floor.",
+  "anchorId": null,
+  "variants": [
+    "default"
+  ],
+  "implementedBy": "src/components/Funnel.jsx",
+  "measuredFrom": [
+    {
+      "cite": "src/components/Funnel.jsx:38-74",
+      "quote": "<div data-funnel=\"\" className=\"funnel\">"
+    },
+    {
+      "cite": "CLONE_SPEC.md:315-414",
+      "quote": "### 3.4 Funnel: \"Why Shelf\" sticky title, bookmark clip-path and falling tags"
+    },
+    {
+      "cite": "src/lib/bookmark.js:86-109",
+      "quote": "header.style.clipPath = `path(\"${pathD(m.width, corner, m.sideY, m.tipY)}\")`"
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollow": "hero.demo-mockup",
+    "groupedIn": "bookmarkHeader"
+  },
+  "contentSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "eyebrow",
+      "title",
+      "body",
+      "tags"
+    ],
+    "properties": {
+      "eyebrow": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "iconRole"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 3,
+            "x-realMaxWords": 2
+          },
+          "iconRole": {
+            "const": "icon.ui-glyph"
+          }
+        }
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 8,
+        "x-realMaxWords": 6
+      },
+      "body": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 33,
+        "x-realMaxWords": 26
+      },
+      "tags": {
+        "type": "array",
+        "minItems": 12,
+        "maxItems": 12,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "iconRole"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 3,
+              "x-realMaxWords": 2
+            },
+            "iconRole": {
+              "enum": [
+                "icon.source-generic",
+                "icon.third-party-brand"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "motionSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "pattern",
+      "secondary",
+      "reducedMotionFallback"
+    ],
+    "properties": {
+      "pattern": {
+        "enum": [
+          "bookmark-clip-scroll"
+        ]
+      },
+      "secondary": {
+        "const": [
+          "matter-js-tag-drop",
+          "funnel-reveal-reversible",
+          "ask-wobble"
+        ]
+      },
+      "reducedMotionFallback": {
+        "const": "tags-placed-on-floor-no-physics"
+      }
+    }
+  },
+  "motion": {
+    "pattern": "bookmark-clip-scroll",
+    "secondary": [
+      "matter-js-tag-drop",
+      "funnel-reveal-reversible",
+      "ask-wobble"
+    ],
+    "reducedMotionFallback": "tags-placed-on-floor-no-physics",
+    "evidence": [
+      {
+        "cite": "src/lib/bookmark.js:42-55",
+        "quote": "export function measure(el) {"
+      },
+      {
+        "cite": "src/lib/bookmark.js:166-200",
+        "quote": "const order = [...tags]"
+      },
+      {
+        "cite": "src/lib/bookmark.js:260-270",
+        "quote": "if (reduced) {"
+      },
+      {
+        "cite": "src/index.css:229-243",
+        "quote": "[data-funnel-trigger].is-in .reveal > * { translate: 0 0; }"
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "breakpoint": "breakpoint.bookmark-narrow",
+      "target": "header[data-bookmark]",
+      "change": "--notch 120px and --corner 20px below 40rem (clamp(96px,15vw,220px) / 56px above)",
+      "evidence": [
+        {
+          "cite": "src/index.css:184-186",
+          "quote": "[data-bookmark] { --notch: 120px; --corner: 20px; }"
+        }
+      ]
+    },
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": ".tag",
+      "change": "tag pills 22px font, padding 14x24, gap 10 at 640px+; 12.8px, padding 8x12, gap 6 below",
+      "evidence": [
+        {
+          "cite": "src/components/Funnel.jsx:66",
+          "quote": "px-3 py-2 text-[0.8rem] text-text-muted sm:gap-2.5 sm:px-6 sm:py-3.5 sm:text-[1.375rem]"
+        }
+      ]
+    },
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "title",
+      "change": "48px at 640px+, 36px (2 lines) below",
+      "evidence": [
+        {
+          "cite": "src/components/Funnel.jsx:49",
+          "quote": "text-4xl font-semibold sm:text-5xl"
+        }
+      ]
+    }
+  ],
+  "accessibility": "Tags container is aria-hidden and pointer-events:none. Title is a <p> (no negative tracking).",
+  "notes": [
+    "Tag physics is intentionally non-deterministic (Math.random shuffle/jitter/velocities, src/lib/bookmark.js:172-196 and :294). Settle time (~4-5s) and resting positions vary run-to-run on BOTH the original and the clone; no contract may claim fixed tag positions or settle times (QA correction 5).",
+    "The bookmark clip-path is scroll-scrubbed JS (no CSS transition) and still runs under reduced motion; only the physics and the reveal transitions are disabled."
+  ]
+}

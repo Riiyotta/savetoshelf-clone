@@ -1,0 +1,37 @@
+{
+  "id": "primitive.button-009",
+  "kind": "primitive",
+  "contractVersion": "1.0.0",
+  "purpose": "Osmo 'Button 009' lime CTA with arrow-swap hover and squeeze on press (nav 'Join waitlist').",
+  "implementedBy": "src/components/Nav.jsx",
+  "tokens": [
+    "component.button-009.bg",
+    "component.button-009.fg",
+    "component.button-009.radius",
+    "component.button-009.click-scale",
+    "motion.easing.hover",
+    "elevation.button-focus-ring"
+  ],
+  "props": [
+    "label",
+    "href"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Nav.jsx:57-64",
+      "quote": "className=\"button-009\""
+    },
+    {
+      "cite": "src/index.css:78-173",
+      "quote": "/* Osmo Button 009 with the nav overrides */"
+    }
+  ],
+  "motion": {
+    "hover": "label +16px, arrows swap (.5s ease-hover, 50-75ms delays), only under (hover:hover) and (pointer:fine) and no-preference",
+    "active": "scale .955 .925 (.15s)",
+    "reducedMotion": "hover slide disabled (media query gate)"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "version": "1.0.0",
+  "note": "Closed set a generator may instantiate/reference. extraction/verify_all.py checks parity with sections/, primitives/, components/, assets/asset-roles.json and the schema's node/page properties.",
+  "sections": [
+    "chrome.floating-nav",
+    "hero.intro",
+    "hero.demo-mockup",
+    "story.why-funnel",
+    "story.finding",
+    "story.saving-steps",
+    "support.faq",
+    "conversion.closing-waitlist",
+    "chrome.footer"
+  ],
+  "primitives": [
+    "primitive.button-009",
+    "primitive.button-submit",
+    "primitive.input-email",
+    "primitive.eyebrow-pill",
+    "primitive.nav-link",
+    "primitive.search-chip",
+    "primitive.source-tag-pill",
+    "primitive.number-badge",
+    "primitive.icon-tile",
+    "primitive.mark-highlight",
+    "primitive.caret",
+    "primitive.icon",
+    "primitive.logo-mark"
+  ],
+  "components": [
+    "component.squircle-surface",
+    "component.waitlist-form",
+    "component.search-palette",
+    "component.app-mockup-window",
+    "component.save-card",
+    "component.step-card",
+    "component.faq-item",
+    "component.reveal-text"
+  ],
+  "templates": [
+    "template.home"
+  ],
+  "nodeProperties": [
+    "section",
+    "variant",
+    "content",
+    "motion"
+  ],
+  "pageProperties": [
+    "pageSpecVersion",
+    "purpose",
+    "template",
+    "route",
+    "theme",
+    "meta",
+    "pageMotion",
+    "nodes"
+  ],
+  "motionProperties": [
+    "pattern",
+    "secondary",
+    "reducedMotionFallback"
+  ],
+  "assetRoles": [
+    "brand.logo-mark",
+    "brand.placeholder-mark",
+    "brand.app-icons",
+    "icon.ui-glyph",
+    "icon.source-generic",
+    "icon.third-party-brand",
+    "mockup.thumbnail-color-block",
+    "form.waitlist-endpoint"
+  ],
+  "generationPolicies": [
+    "may-generate-new",
+    "must-not-reproduce-real-brand",
+    "css-color-block-only",
+    "must-not-reuse-live-endpoint"
+  ]
+}

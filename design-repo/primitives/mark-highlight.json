@@ -1,0 +1,29 @@
+{
+  "id": "primitive.mark-highlight",
+  "kind": "primitive",
+  "contractVersion": "1.0.0",
+  "purpose": "Lime squircle fill behind one headline word that sweeps in from the left on load.",
+  "implementedBy": "src/components/Hero.jsx",
+  "tokens": [
+    "semantic.accent.highlight",
+    "radius.mark",
+    "motion.easing.sweep",
+    "motion.duration.sweep"
+  ],
+  "props": [
+    "word"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Hero.jsx:37-40",
+      "quote": "<Squircle as=\"span\" className=\"mark-fill rounded-[0.23em]\" aria-hidden=\"true\" />"
+    },
+    {
+      "cite": "src/index.css:189-198",
+      "quote": ".hero-h1 .mark-fill {"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "theme": "light",
+  "isDefault": true,
+  "note": "Only theme observed: the original ships no dark mode (no prefers-color-scheme rule in index.C1emElDY.css). Every semantic token resolved to its foundation value.",
+  "resolves": {
+    "semantic.text.primary": {
+      "ref": "color.text.default",
+      "value": "#1a1a18"
+    },
+    "semantic.text.secondary": {
+      "ref": "color.text.muted",
+      "value": "#76766e"
+    },
+    "semantic.text.tertiary": {
+      "ref": "color.text.faint",
+      "value": "#a5a59c"
+    },
+    "semantic.text.on-accent": {
+      "ref": "color.text.default",
+      "value": "#1a1a18"
+    },
+    "semantic.text.inverse": {
+      "ref": "color.surface.raised",
+      "value": "#fcfcfb"
+    },
+    "semantic.text.soft": {
+      "ref": "color.alpha.text-70",
+      "value": "rgba(26,26,24,.7)"
+    },
+    "semantic.surface.page": {
+      "ref": "color.surface.default",
+      "value": "#f2f1ed"
+    },
+    "semantic.surface.card": {
+      "ref": "color.surface.raised",
+      "value": "#fcfcfb"
+    },
+    "semantic.surface.inset": {
+      "ref": "color.surface.sunken",
+      "value": "#e9e8e3"
+    },
+    "semantic.surface.brand": {
+      "ref": "color.accent.default",
+      "value": "#9ee86f"
+    },
+    "semantic.surface.inverse": {
+      "ref": "color.text.default",
+      "value": "#1a1a18"
+    },
+    "semantic.surface.disabled": {
+      "ref": "color.surface.default",
+      "value": "#f2f1ed"
+    },
+    "semantic.border.default": {
+      "ref": "color.border.default",
+      "value": "#e1e0da"
+    },
+    "semantic.border.strong": {
+      "ref": "color.border.strong",
+      "value": "#c6c4bd"
+    },
+    "semantic.border.focus": {
+      "ref": "color.text.muted",
+      "value": "#76766e"
+    },
+    "semantic.accent.highlight": {
+      "ref": "color.accent.default",
+      "value": "#9ee86f"
+    },
+    "semantic.accent.note-rule": {
+      "ref": "color.accent.default",
+      "value": "#9ee86f"
+    },
+    "semantic.font.heading": {
+      "ref": "typography.fontFamily.display",
+      "value": "\"General Sans\", ui-sans-serif, system-ui, sans-serif"
+    },
+    "semantic.font.body": {
+      "ref": "typography.fontFamily.body",
+      "value": "\"Switzer\", ui-sans-serif, system-ui, sans-serif"
+    }
+  }
+}

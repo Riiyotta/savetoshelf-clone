@@ -1,0 +1,132 @@
+{
+  "version": "1.0.0",
+  "routeInventory": {
+    "routes": [
+      {
+        "path": "/",
+        "template": "template.home"
+      }
+    ],
+    "inPageAnchors": [
+      "#finding",
+      "#saving",
+      "#faq",
+      "#waitlist"
+    ],
+    "nonPageEndpoints": [
+      {
+        "path": "/api/waitlist",
+        "method": "POST",
+        "note": "Live signup endpoint, not a page. Never reused (asset role form.waitlist-endpoint)."
+      }
+    ],
+    "evidence": [
+      {
+        "cite": "src/App.jsx:29-41",
+        "quote": "<Nav />"
+      },
+      {
+        "cite": "Shelf_ Everything you saved. Finally findable..html:62",
+        "quote": "fetch(\"/api/waitlist\""
+      },
+      {
+        "cite": "CLONE_SPEC.md:13",
+        "quote": "**Framework:** Astro (static output"
+      }
+    ],
+    "verificationNote": "Single-page site. Orchestrator probe (2026-10-14): no sitemap.xml/robots.txt, 23 common routes return the Vercel platform NOT_FOUND (not a designed page); the original JS references no other route besides POST /api/waitlist. Spot re-check in this build: / 200; /privacy /terms /about /blog /pricing /login /sitemap.xml /robots.txt 404; GET /api/waitlist 404 (POST-only). The full list of the 23 probed paths was not handed to this build. Do NOT invent extra templates/pages."
+  },
+  "templates": {
+    "template.home": {
+      "id": "template.home",
+      "routes": [
+        "/"
+      ],
+      "purpose": "Waitlist landing page for a pre-launch product: promise -> demo -> problem -> answer -> how -> objections -> conversion.",
+      "nodes": [
+        {
+          "section": "chrome.floating-nav",
+          "variant": "default",
+          "required": true,
+          "repeatable": false,
+          "group": "chrome"
+        },
+        {
+          "section": "hero.intro",
+          "variant": "default",
+          "required": true,
+          "repeatable": false,
+          "group": "bookmarkHeader"
+        },
+        {
+          "section": "hero.demo-mockup",
+          "variant": "default",
+          "required": true,
+          "repeatable": false,
+          "group": "bookmarkHeader"
+        },
+        {
+          "section": "story.why-funnel",
+          "variant": "default",
+          "required": true,
+          "repeatable": false,
+          "group": "bookmarkHeader"
+        },
+        {
+          "section": "story.finding",
+          "variant": "default",
+          "required": true,
+          "repeatable": false,
+          "group": "main"
+        },
+        {
+          "section": "story.saving-steps",
+          "variant": "default",
+          "required": true,
+          "repeatable": false,
+          "group": "main"
+        },
+        {
+          "section": "support.faq",
+          "variant": "default",
+          "required": true,
+          "repeatable": false,
+          "group": "main"
+        },
+        {
+          "section": "conversion.closing-waitlist",
+          "variant": "default",
+          "required": true,
+          "repeatable": false,
+          "group": "main"
+        },
+        {
+          "section": "chrome.footer",
+          "variant": "default",
+          "required": true,
+          "repeatable": false,
+          "group": "chrome"
+        }
+      ],
+      "groups": {
+        "chrome": "nav (fixed, outside the clipped header) and footer",
+        "bookmarkHeader": "header[data-bookmark]: hero + mockup + funnel share ONE scroll-driven clip-path; the tags container is a sibling of the funnel inside the header",
+        "main": "<main> wraps finding, saving, faq, closing waitlist"
+      },
+      "evidence": [
+        {
+          "cite": "src/App.jsx:29-41",
+          "quote": "<main>"
+        },
+        {
+          "cite": "src/components/Hero.jsx:26-58",
+          "quote": "<HeroMockup />"
+        },
+        {
+          "cite": "CLONE_SPEC.md:96-109",
+          "quote": "### 1.5 Page skeleton and document y-positions (1440×900, doc height 5364px)"
+        }
+      ]
+    }
+  }
+}

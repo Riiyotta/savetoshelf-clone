@@ -1,0 +1,27 @@
+{
+  "id": "primitive.logo-mark",
+  "kind": "primitive",
+  "contractVersion": "1.0.0",
+  "purpose": "Three-book logo mark (inline in nav with hover tilt; <img> in mockup, saving tap tile, footer). Real Shelf brand mark: reference reconstruction only.",
+  "implementedBy": "src/components/icons.jsx",
+  "tokens": [
+    "iconSize.logo",
+    "motion.easing.logo-spring"
+  ],
+  "props": [
+    "assetRole"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/icons.jsx:4-10",
+      "quote": "export const LogoBooks"
+    },
+    {
+      "cite": "src/index.css:64-76",
+      "quote": ".logo .book {"
+    }
+  ]
+}

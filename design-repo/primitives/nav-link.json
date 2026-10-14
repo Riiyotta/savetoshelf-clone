@@ -1,0 +1,30 @@
+{
+  "id": "primitive.nav-link",
+  "kind": "primitive",
+  "contractVersion": "1.0.0",
+  "purpose": "15px in-page anchor link; colour fades to muted on hover (hover-capable pointers only).",
+  "implementedBy": "src/components/Nav.jsx",
+  "tokens": [
+    "semantic.text.primary",
+    "semantic.text.secondary",
+    "typography.fontSize.nav-15",
+    "motion.duration.fast"
+  ],
+  "props": [
+    "label",
+    "anchor"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Nav.jsx:51",
+      "quote": "className=\"text-text transition hover:text-text-muted\""
+    },
+    {
+      "cite": "tailwind.config.cjs:9",
+      "quote": "future: { hoverOnlyWhenSupported: true },"
+    }
+  ]
+}

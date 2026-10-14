@@ -1,0 +1,37 @@
+{
+  "id": "component.search-palette",
+  "kind": "component",
+  "contractVersion": "1.0.0",
+  "purpose": "Command-palette search card that auto-types a question, then fades in chips and hits. Variants hero (shadow, collapses when closed) and finding (keep, fixed height).",
+  "implementedBy": "src/components/Palette.jsx",
+  "tokens": [
+    "component.palette.bg",
+    "component.palette.radius-hero",
+    "component.palette.radius-finding",
+    "component.palette.shadow-hero",
+    "motion.palette.open-delay",
+    "motion.palette.char-delay",
+    "motion.palette.hold-open",
+    "motion.palette.visibility-threshold"
+  ],
+  "props": [
+    "question",
+    "chips",
+    "hits",
+    "totalResults"
+  ],
+  "variants": [
+    "hero",
+    "finding"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Palette.jsx:4-8",
+      "quote": "// §3.3 Palette component, shared by the hero mockup and #finding."
+    },
+    {
+      "cite": "CLONE_SPEC.md:281-313",
+      "quote": "### 3.3 Palette component (shared by hero and #finding)"
+    }
+  ]
+}

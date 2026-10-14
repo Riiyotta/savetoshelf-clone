@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "enforced": {
+    "pageSpecColorTokens": "PageSpec colorToken fields accept only catalog paths listed in schema enums (thumb + source-dot sets); checked by schema enum + semantic_validate COLOR_TOKEN_IN_CATALOG + verify_all enum-subset check.",
+    "noRawValuesInPageSpec": "PageSpec has no free-form style field; every visual value is owned by section/component contracts.",
+    "restrictedTokens": "Tokens flagged restricted=reference-reconstruction-only (color.third-party-brand.*) must not be referenced by generated pages or new components."
+  },
+  "convention": {
+    "aliasOverRaw": "New components reference semantic.* or component.* aliases, never raw hex.",
+    "squircle": "Elements with data-squircle use motion.squircle.corner-smoothing (0.6)."
+  },
+  "rawValueRestrictions": {
+    "color": "no raw hex/rgba outside tokens/00-foundation/color.json",
+    "fontSize": "use typography.fontSize.* only",
+    "fontFamily": "Switzer (body) / General Sans (display) only",
+    "radius": "use radius.* only",
+    "elevation": "use elevation.* only; the page has no other shadows",
+    "motion": "use motion.* easings/durations only"
+  },
+  "overrides": {
+    "pageSpecTokenOverrideField": null,
+    "note": "PageSpecs carry NO per-instance token-override field (MASTER-GUIDE 3.21). The only token references in a PageSpec are colorToken on CSS colour-block thumbnails and source dots, closed by schema enum."
+  },
+  "copyBudgetFormula": "x-maxWords = realMaxWords + max(1, ceil(realMaxWords * 0.25)), realMaxWords measured from the site's own copy (example.pagespec.json).",
+  "cardinalityPolicy": "Array lengths (nav links 3, FAQ items 6, saving steps 3, funnel tags 12, mockup cards 4, palette chips 3, palette hits hero 3 / finding 2) are locked to the observed counts. Changing them is a design-review decision, not a generator decision.",
+  "excludedDeadUtilities": [
+    "#f3e7dc: compiled into index.C1emElDY.css as .bg-[#f3e7dc] but 0 DOM uses in the snapshot; not tokenised.",
+    "clamp(2rem,6.5vw,3.75rem): compiled utility with 0 DOM uses; not tokenised."
+  ]
+}

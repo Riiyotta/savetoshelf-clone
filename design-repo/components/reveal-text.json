@@ -1,0 +1,27 @@
+{
+  "id": "component.reveal-text",
+  "kind": "component",
+  "contractVersion": "1.0.0",
+  "purpose": "Masked line reveal: overflow-hidden parent, child translates 0 115% -> 0 on .is-in (funnel: reversible per frame; finding: IO with instant reset).",
+  "implementedBy": "src/index.css",
+  "tokens": [
+    "motion.easing.reveal",
+    "motion.duration.reveal"
+  ],
+  "props": [
+    "children"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/index.css:229-233",
+      "quote": "[data-funnel-trigger] .reveal > * { translate: 0 115%;"
+    },
+    {
+      "cite": "src/index.css:247-253",
+      "quote": "[data-reveal] .reveal { overflow: hidden; }"
+    }
+  ]
+}

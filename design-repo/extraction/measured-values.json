@@ -1,0 +1,654 @@
+{
+  "version": "1.0.0",
+  "evidenceRoot": "..",
+  "evidenceRootNote": "Every cite path is relative to the project folder that CONTAINS design-repo/. When that sibling tree is absent (standalone delivery), extraction/verify_all.py downgrades citation checks to WARN instead of failing.",
+  "citationFormat": "{\"cite\": \"path:line[-line]\", \"quote\": \"substring that must appear inside the cited lines\"}. The quote makes in-range-but-wrong citations machine-detectable; verify_all.py checks every cite object anywhere in the repo.",
+  "evidenceSources": [
+    {
+      "path": "CLONE_SPEC.md",
+      "kind": "Playwright recon spec (1440/1280/768/390, 2026-10-14)",
+      "note": "Strong first draft. QA corrections below are more authoritative where they differ."
+    },
+    {
+      "path": "ia.json",
+      "kind": "IA (ia-builder skill): 1 route, 1 template, 9 sections",
+      "note": "Section ids, categories and template id in this repo are taken verbatim from ia.json (added after dispatch). Root ia.json/IA.md/matrix.csv/README.md were not edited."
+    },
+    {
+      "path": "src/index.css, src/App.jsx, src/components/*.jsx, src/lib/bookmark.js",
+      "kind": "clone source",
+      "note": "Primary citation source for tokens, contracts and motion."
+    },
+    {
+      "path": "tailwind.config.cjs, package.json, index.html",
+      "kind": "clone config / meta"
+    },
+    {
+      "path": "public/assets/MANIFEST.md",
+      "kind": "asset manifest"
+    },
+    {
+      "path": "Shelf_ Everything you saved. Finally findable..html",
+      "kind": "saved original page (Astro output)"
+    },
+    {
+      "path": "Shelf_ Everything you saved. Finally findable._files/index.C1emElDY.css",
+      "kind": "original compiled CSS (Tailwind v4.3.3, single line)"
+    },
+    {
+      "path": "Shelf_ Everything you saved. Finally findable._files/Base.astro_astro_type_script_index_0_lang.C5_EadgT.js",
+      "kind": "original JS bundle (Lenis, matter-js, squircle, bookmark logic)"
+    }
+  ],
+  "frameworks": {
+    "original": {
+      "framework": "Astro (static)",
+      "css": "Tailwind v4.3.3",
+      "evidence": [
+        {
+          "cite": "CLONE_SPEC.md:13",
+          "quote": "**Framework:** Astro"
+        },
+        {
+          "cite": "Shelf_ Everything you saved. Finally findable._files/index.C1emElDY.css:1",
+          "quote": "tailwindcss v4.3.3"
+        }
+      ]
+    },
+    "clone": {
+      "declaredInPackageJson": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "vite": "^5.4.10",
+        "tailwindcss": "^3.4.14",
+        "lenis": "^1.3.26",
+        "matter-js": "^0.20.0",
+        "figma-squircle": "^1.1.0",
+        "@vitejs/plugin-react": "^4.3.1"
+      },
+      "installedPerNodeModules": {
+        "react": "18.3.1",
+        "react-dom": "18.3.1",
+        "vite": "5.4.21",
+        "tailwindcss": "3.4.19",
+        "lenis": "1.3.26",
+        "matter-js": "0.20.0",
+        "figma-squircle": "1.1.0",
+        "@vitejs/plugin-react": "4.7.0"
+      },
+      "evidence": [
+        {
+          "cite": "package.json:11-24",
+          "quote": "\"react\": \"^18.3.1\""
+        },
+        {
+          "cite": "package.json:22",
+          "quote": "\"tailwindcss\": \"^3.4.14\""
+        },
+        {
+          "cite": "package.json:23",
+          "quote": "\"vite\": \"^5.4.10\""
+        }
+      ],
+      "note": "Ranges from package.json; resolved versions read from node_modules/*/package.json at build time (2026-10-14). Snapshot, not a live mirror (MASTER-GUIDE 3.10)."
+    }
+  },
+  "qaCorrections": [
+    {
+      "id": "QA1",
+      "finding": "Tailwind transitionProperty DEFAULT/colors extended to Tailwind v4's lists (adds outline-color, --tw-gradient-*, translate/scale/rotate, display, ...).",
+      "supersedes": "Tailwind v3 default transition property list",
+      "evidence": [
+        {
+          "cite": "tailwind.config.cjs:39-45",
+          "quote": "v4 `transition` / `transition-colors` property lists (measured on the original)."
+        }
+      ]
+    },
+    {
+      "id": "QA2",
+      "finding": "Nav stuck ring = 0 0 0 1px color-mix(in srgb, var(--border) 55%, transparent) (oklab interpolation during the .4s ease-out fade); max-width 896->736 over .6s cubic-bezier(.32,.72,0,1); threshold scrollY > 12.",
+      "supersedes": "CLONE_SPEC.md:139 literal rgba(225,224,218,.55) (same resting colour, different interpolation)",
+      "evidence": [
+        {
+          "cite": "src/index.css:52-61",
+          "quote": "color-mix(in srgb, var(--border) 55%, transparent)"
+        },
+        {
+          "cite": "src/components/Nav.jsx:20",
+          "quote": "window.scrollY > 12"
+        }
+      ]
+    },
+    {
+      "id": "QA3",
+      "finding": "The original DOES ship the Lenis stylesheet (inline html.lenis{height:auto} ...); the clone imports lenis/dist/lenis.css. An earlier claim that it ships none was wrong.",
+      "supersedes": "an earlier recon claim (not present in the current CLONE_SPEC.md, whose line 16 already states the CSS is injected)",
+      "evidence": [
+        {
+          "cite": "Shelf_ Everything you saved. Finally findable..html:19",
+          "quote": "html.lenis,html.lenis body{height:auto}"
+        },
+        {
+          "cite": "src/App.jsx:3",
+          "quote": "import 'lenis/dist/lenis.css'"
+        }
+      ]
+    },
+    {
+      "id": "QA4",
+      "finding": "Hero email input uses outline-style:none; focus is shown via the form's border-color change.",
+      "supersedes": "CLONE_SPEC.md:217 `focus:outline-none`",
+      "evidence": [
+        {
+          "cite": "src/components/WaitlistForm.jsx:85",
+          "quote": "focus:[outline-style:none]"
+        },
+        {
+          "cite": "src/components/WaitlistForm.jsx:61",
+          "quote": "focus-within:border-text-muted"
+        }
+      ]
+    },
+    {
+      "id": "QA5",
+      "finding": "Tag physics is intentionally non-deterministic (Math.random shuffle, jitter, initial velocities, release velocities). Settle time (~4-5s) and resting depth vary run-to-run on BOTH sites; no contract claims fixed positions or settle times.",
+      "evidence": [
+        {
+          "cite": "src/lib/bookmark.js:172-196",
+          "quote": "const j = Math.floor(Math.random() * (i + 1))"
+        },
+        {
+          "cite": "src/lib/bookmark.js:294",
+          "quote": "y: -(9 + Math.random() * 7)"
+        },
+        {
+          "cite": "CLONE_SPEC.md:611",
+          "quote": "Tag pile positions are random on every page load"
+        }
+      ]
+    },
+    {
+      "id": "QA6",
+      "finding": "Meta description, canonical, og:type/title/description/url and twitter:card=summary added to the clone's index.html to match the original.",
+      "evidence": [
+        {
+          "cite": "index.html:7-14",
+          "quote": "<meta name=\"twitter:card\" content=\"summary\" />"
+        },
+        {
+          "cite": "Shelf_ Everything you saved. Finally findable..html:5",
+          "quote": "<meta property=\"og:type\" content=\"website\">"
+        }
+      ]
+    },
+    {
+      "id": "QA7",
+      "finding": "Lenis config lerp .1, smoothWheel, syncTouch false, anchors offset -100; lenis 1.3.26; matter-js 0.20.0; figma-squircle cornerSmoothing 0.6.",
+      "evidence": [
+        {
+          "cite": "src/App.jsx:16",
+          "quote": "lerp: 0.1, smoothWheel: true, syncTouch: false, anchors: { offset: -100 }"
+        },
+        {
+          "cite": "Shelf_ Everything you saved. Finally findable._files/Base.astro_astro_type_script_index_0_lang.C5_EadgT.js:63",
+          "quote": "1.3.26"
+        },
+        {
+          "cite": "Shelf_ Everything you saved. Finally findable._files/Base.astro_astro_type_script_index_0_lang.C5_EadgT.js:2",
+          "quote": "0.20.0"
+        },
+        {
+          "cite": "src/components/Squircle.jsx:21",
+          "quote": "|| 0.6"
+        }
+      ]
+    }
+  ],
+  "iaMapping": {
+    "note": "This repo uses ia.json's ids verbatim. ia.json files hero.demo-mockup under HERO and three adjacent STORY sections, so graph rules ONE_HERO (primary hero = hero.intro, demo is a named companion) and NO_ADJACENT_SAME_CATEGORY (3 named exception pairs) were written against that real structure.",
+    "template": {
+      "cite": "ia.json:77-80",
+      "quote": "\"id\": \"template.home\""
+    },
+    "sectionOrder": {
+      "cite": "ia.json:85-95",
+      "quote": "\"chrome.floating-nav\","
+    }
+  },
+  "routeInventory": {
+    "routes": [
+      "/"
+    ],
+    "evidence": [
+      {
+        "cite": "ia.json:80-82",
+        "quote": "\"/\""
+      },
+      {
+        "cite": "Shelf_ Everything you saved. Finally findable..html:62",
+        "quote": "fetch(\"/api/waitlist\""
+      }
+    ],
+    "note": "Single route. /api/waitlist is a POST endpoint, not a page. See templates/templates.json routeInventory.verificationNote."
+  },
+  "structurallyUnusual": [
+    "Single route, single template: no other pages exist; none may be invented.",
+    "Live third-party endpoint: the original POSTs {email} to /api/waitlist (real signup). The clone stubs it locally; PageSpec submitTarget is closed to 'local-stub' and endpointPolicy is pinned to must-not-reuse-live-endpoint (semantic ENDPOINT_POLICY_PINNED + verify_all pinned-role check).",
+    "Real live company (Shelf / savetoshelf.com): logo, app icons and third-party brand tag icons are must-not-reproduce-real-brand; Plausible analytics (analytics.mammutstudios.com) is intentionally excluded.",
+    "No raster content images/video/og:image: thumbnails are CSS colour blocks (asset role mockup.thumbnail-color-block, css-color-block-only); no photo role exists.",
+    "Three sections (hero.intro, hero.demo-mockup, story.why-funnel) live inside ONE header whose bottom edge is a scroll-driven clip-path; they cannot be reordered or separated (BOOKMARK_HEADER_SEQUENCE).",
+    "The nav CTA #waitlist targets the hero form; the closing waitlist section has no id.",
+    "The hero demo scrim ([data-demo-scrim]) is never activated by any shipped script and is kept inert."
+  ],
+  "histograms": {
+    "method": "Counted over the saved original: hex literals in index.C1emElDY.css; Tailwind utility classes in the snapshot HTML class attributes (usage counts).",
+    "cssHexTop30": [
+      [
+        "#0000",
+        20
+      ],
+      [
+        "#000",
+        5
+      ],
+      [
+        "#3fbf4a",
+        4
+      ],
+      [
+        "#0000001a",
+        4
+      ],
+      [
+        "#fff",
+        3
+      ],
+      [
+        "#2d64bc",
+        3
+      ],
+      [
+        "#1c1c1a",
+        2
+      ],
+      [
+        "#dfe4ee",
+        2
+      ],
+      [
+        "#e2ded4",
+        2
+      ],
+      [
+        "#e4e8f2",
+        2
+      ],
+      [
+        "#e6e2ec",
+        2
+      ],
+      [
+        "#e8effa",
+        2
+      ],
+      [
+        "#eae7df",
+        2
+      ],
+      [
+        "#efe3d6",
+        2
+      ],
+      [
+        "#f3e7dc",
+        2
+      ],
+      [
+        "#1a1a18",
+        2
+      ],
+      [
+        "#76766e",
+        2
+      ],
+      [
+        "#1a1a1838",
+        1
+      ],
+      [
+        "#a5a59c",
+        1
+      ],
+      [
+        "#f2f1ed",
+        1
+      ],
+      [
+        "#fcfcfb",
+        1
+      ],
+      [
+        "#e9e8e3",
+        1
+      ],
+      [
+        "#e1e0da",
+        1
+      ],
+      [
+        "#c6c4bd",
+        1
+      ],
+      [
+        "#9ee86f",
+        1
+      ],
+      [
+        "#d6336c",
+        1
+      ],
+      [
+        "#121212",
+        1
+      ]
+    ],
+    "htmlColorClassTop30": [
+      [
+        "text-text-muted",
+        71
+      ],
+      [
+        "bg-surface",
+        31
+      ],
+      [
+        "text-text-faint",
+        27
+      ],
+      [
+        "bg-surface-raised",
+        20
+      ],
+      [
+        "text-text",
+        11
+      ],
+      [
+        "bg-text",
+        8
+      ],
+      [
+        "bg-accent",
+        8
+      ],
+      [
+        "bg-surface-sunken",
+        7
+      ],
+      [
+        "bg-border-strong/60",
+        6
+      ],
+      [
+        "bg-border-strong/40",
+        6
+      ],
+      [
+        "text-text/70",
+        3
+      ],
+      [
+        "bg-border-strong/50",
+        3
+      ],
+      [
+        "text-surface",
+        3
+      ],
+      [
+        "text-surface-raised",
+        2
+      ],
+      [
+        "bg-[#e4e8f2]",
+        2
+      ],
+      [
+        "text-[#3fbf4a]",
+        2
+      ],
+      [
+        "bg-[#efe3d6]",
+        2
+      ],
+      [
+        "bg-[#dfe4ee]",
+        2
+      ],
+      [
+        "bg-[#e2ded4]",
+        2
+      ],
+      [
+        "bg-source-linkedin",
+        1
+      ],
+      [
+        "bg-source-instagram",
+        1
+      ],
+      [
+        "bg-[#3fbf4a]",
+        1
+      ],
+      [
+        "bg-[#1c1c1a]",
+        1
+      ],
+      [
+        "bg-[#2d64bc]",
+        1
+      ],
+      [
+        "bg-surface-raised/45",
+        1
+      ],
+      [
+        "bg-[#eae7df]",
+        1
+      ],
+      [
+        "bg-[#e6e2ec]",
+        1
+      ],
+      [
+        "text-source-linkedin",
+        1
+      ],
+      [
+        "bg-[#e8effa]",
+        1
+      ],
+      [
+        "bg-accent/45",
+        1
+      ]
+    ],
+    "htmlRadiusClassTop25": [
+      [
+        "rounded-full",
+        28
+      ],
+      [
+        "rounded-lg",
+        20
+      ],
+      [
+        "rounded-[10px]",
+        12
+      ],
+      [
+        "rounded-md",
+        11
+      ],
+      [
+        "rounded-2xl",
+        8
+      ],
+      [
+        "rounded-[1.25rem]",
+        7
+      ],
+      [
+        "rounded-[1rem]",
+        5
+      ],
+      [
+        "rounded-[13px]",
+        3
+      ],
+      [
+        "rounded",
+        3
+      ],
+      [
+        "rounded-[1.5rem]",
+        3
+      ],
+      [
+        "rounded-[1.75rem]",
+        3
+      ],
+      [
+        "rounded-[0.7rem]",
+        2
+      ],
+      [
+        "rounded-xl",
+        2
+      ],
+      [
+        "rounded-b-[3.5rem]",
+        1
+      ],
+      [
+        "rounded-[0.23em]",
+        1
+      ],
+      [
+        "rounded-[2rem]",
+        1
+      ],
+      [
+        "rounded-[11px]",
+        1
+      ],
+      [
+        "sm:rounded-[15px]",
+        1
+      ],
+      [
+        "rounded-t-[2rem]",
+        1
+      ]
+    ],
+    "htmlFontSizeClassTop25": [
+      [
+        "text-[14px]",
+        31
+      ],
+      [
+        "text-[15px]",
+        22
+      ],
+      [
+        "text-[13px]",
+        17
+      ],
+      [
+        "text-[17px]",
+        13
+      ],
+      [
+        "text-[0.8rem]",
+        12
+      ],
+      [
+        "sm:text-[1.375rem]",
+        12
+      ],
+      [
+        "text-base",
+        10
+      ],
+      [
+        "text-[12px]",
+        6
+      ],
+      [
+        "text-[16px]",
+        6
+      ],
+      [
+        "sm:text-lg",
+        6
+      ],
+      [
+        "sm:text-base",
+        6
+      ],
+      [
+        "text-[20px]",
+        5
+      ],
+      [
+        "text-4xl",
+        5
+      ],
+      [
+        "text-sm",
+        4
+      ],
+      [
+        "sm:text-5xl",
+        4
+      ],
+      [
+        "text-[clamp(2.75rem,8.5vw,5.25rem)]",
+        1
+      ],
+      [
+        "text-[19px]",
+        1
+      ],
+      [
+        "text-[30px]",
+        1
+      ],
+      [
+        "text-[21px]",
+        1
+      ],
+      [
+        "sm:text-[3.25rem]",
+        1
+      ],
+      [
+        "text-[10px]",
+        1
+      ]
+    ],
+    "deadUtilitiesExcluded": [
+      "#f3e7dc (compiled .bg-[#f3e7dc], 0 DOM uses)",
+      "clamp(2rem,6.5vw,3.75rem) (compiled, 0 DOM uses)"
+    ]
+  },
+  "handCheckedCitations": "See README 'Citation hand-check' for a sample re-read against quoted content.",
+  "notGroundedFlags": [
+    "The exact list of the 23 probed 404 routes was not available to this build (only 8 re-checked directly).",
+    "/api/waitlist success/error responses are inferred from the JS, never executed (CLONE_SPEC.md:610).",
+    "Array cardinalities are locked to observed counts by policy; there is no evidence of how the design behaves with other counts.",
+    "x-maxWords headroom (+25%, min +1) is a policy formula, not a measurement."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "component.save-card",
+  "kind": "component",
+  "contractVersion": "1.0.0",
+  "purpose": "Mockup recent-save card: uppercase source/day meta, title, accent-ruled note, colour-block thumbnail.",
+  "implementedBy": "src/components/HeroMockup.jsx",
+  "tokens": [
+    "semantic.surface.page",
+    "semantic.accent.note-rule",
+    "typography.letterSpacing.label-wider"
+  ],
+  "props": [
+    "sourceLabel",
+    "day",
+    "title",
+    "note",
+    "thumb"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/HeroMockup.jsx:135-143",
+      "quote": "w-[318px] shrink-0 rounded-2xl bg-surface p-4"
+    }
+  ]
+}

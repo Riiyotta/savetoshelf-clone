@@ -1,0 +1,11 @@
+section,category,templates,routes,Homepage (single-page site)
+chrome.floating-nav,CHROME,1,1,x
+hero.intro,HERO,1,1,x
+hero.demo-mockup,HERO,1,1,x
+story.why-funnel,STORY,1,1,x
+story.finding,STORY,1,1,x
+story.saving-steps,STORY,1,1,x
+support.faq,SUPPORT,1,1,x
+conversion.closing-waitlist,CONVERSION,1,1,x
+chrome.footer,CHROME,1,1,x
+ROUTE COUNT,,,1,1

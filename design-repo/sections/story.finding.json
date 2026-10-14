@@ -1,0 +1,133 @@
+{
+  "id": "story.finding",
+  "kind": "section",
+  "contractVersion": "1.0.0",
+  "category": "story",
+  "pageOrder": 5,
+  "purpose": "Answer to the funnel: a gradient line grows down from the bookmark tip, the headline and body reveal, then the finding search palette (kept open) types a plain-language question and shows parsed filter chips and matching saves.",
+  "anchorId": "finding",
+  "variants": [
+    "default"
+  ],
+  "implementedBy": "src/components/Finding.jsx",
+  "measuredFrom": [
+    {
+      "cite": "src/components/Finding.jsx:28-66",
+      "quote": "<section id=\"finding\">"
+    },
+    {
+      "cite": "CLONE_SPEC.md:418-439",
+      "quote": "## 4. `section#finding`: \"You can find them in one place now\""
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollow": "story.why-funnel"
+  },
+  "contentSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "title",
+      "body",
+      "palette"
+    ],
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 10,
+        "x-realMaxWords": 8
+      },
+      "body": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 35,
+        "x-realMaxWords": 28
+      },
+      "palette": {
+        "$ref": "#/definitions/searchPaletteFinding"
+      }
+    }
+  },
+  "motionSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "pattern",
+      "secondary",
+      "reducedMotionFallback"
+    ],
+    "properties": {
+      "pattern": {
+        "enum": [
+          "line-grow-text-reveal"
+        ]
+      },
+      "secondary": {
+        "const": [
+          "palette-autotype"
+        ]
+      },
+      "reducedMotionFallback": {
+        "const": "line-and-text-shown-palette-full-no-loop"
+      }
+    }
+  },
+  "motion": {
+    "pattern": "line-grow-text-reveal",
+    "secondary": [
+      "palette-autotype"
+    ],
+    "reducedMotionFallback": "line-and-text-shown-palette-full-no-loop",
+    "evidence": [
+      {
+        "cite": "src/index.css:245-257",
+        "quote": "[data-reveal].is-in h2.reveal > * { transition-delay: .32s; }"
+      },
+      {
+        "cite": "src/components/Finding.jsx:11-22",
+        "quote": "{ rootMargin: '0px 0px -32% 0px' }"
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "line",
+      "change": "96px tall below 640px, 128px at 640px+",
+      "evidence": [
+        {
+          "cite": "src/components/Finding.jsx:32",
+          "quote": "h-24 w-px bg-gradient-to-b from-transparent to-border-strong sm:h-32"
+        }
+      ]
+    },
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "h2",
+      "change": "48px/1.1 at 640px+, 36px below",
+      "evidence": [
+        {
+          "cite": "src/components/Finding.jsx:33",
+          "quote": "text-[36px] font-semibold leading-[1.1] sm:text-[48px]"
+        }
+      ]
+    },
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "container",
+      "change": "bottom padding 112px at 640px+, 80px below",
+      "evidence": [
+        {
+          "cite": "src/components/Finding.jsx:30",
+          "quote": "pb-20 text-center sm:pb-28"
+        }
+      ]
+    }
+  ],
+  "accessibility": "h2 + p; palette is presentational (aria content is the typed text).",
+  "notes": [
+    "Body copy says 'all twelve of them', matching the funnel's 12 tags."
+  ]
+}

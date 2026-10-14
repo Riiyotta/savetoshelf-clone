@@ -1,0 +1,1185 @@
+{
+  "version": "1.0.0",
+  "note": "The ONLY token paths a generator may reference. Keys of `categories` are the real category keys used by token-policy.json.",
+  "categories": {
+    "breakpoint": [
+      {
+        "path": "breakpoint.base",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "breakpoint.bookmark-narrow",
+        "layer": "foundation",
+        "type": "mediaQuery"
+      },
+      {
+        "path": "breakpoint.lg",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "breakpoint.sm",
+        "layer": "foundation",
+        "type": "dimension"
+      }
+    ],
+    "color": [
+      {
+        "path": "color.accent.default",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.alpha.accent-45",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.alpha.border-strong-40",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.alpha.border-strong-50",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.alpha.border-strong-60",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.alpha.nav-ring",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.alpha.surface-raised-45",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.alpha.text-70",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.border.default",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.border.strong",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.source.instagram",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.source.linkedin",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.source.note",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.source.x",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.surface.default",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.surface.raised",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.surface.sunken",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.swatch.ink",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.swatch.lilac",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.swatch.linen",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.swatch.mist",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.swatch.peach",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.swatch.sand",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.swatch.sky",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.swatch.steel",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.swatch.web",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.text.default",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.text.faint",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.text.muted",
+        "layer": "foundation",
+        "type": "color"
+      },
+      {
+        "path": "color.third-party-brand.figma",
+        "layer": "foundation",
+        "type": "color",
+        "restricted": "reference-reconstruction-only"
+      },
+      {
+        "path": "color.third-party-brand.instagram",
+        "layer": "foundation",
+        "type": "color",
+        "restricted": "reference-reconstruction-only"
+      },
+      {
+        "path": "color.third-party-brand.x",
+        "layer": "foundation",
+        "type": "color",
+        "restricted": "reference-reconstruction-only"
+      },
+      {
+        "path": "color.third-party-brand.youtube",
+        "layer": "foundation",
+        "type": "color",
+        "restricted": "reference-reconstruction-only"
+      }
+    ],
+    "component": [
+      {
+        "path": "component.button-009.bg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.button-009.click-scale",
+        "layer": "component",
+        "type": "string"
+      },
+      {
+        "path": "component.button-009.fg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.button-009.radius",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.closing-block.bg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.closing-block.radius",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.eyebrow.bg-accent",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.eyebrow.bg-sunken",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.eyebrow.radius",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.faq-item.bg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.faq-item.icon-bg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.faq-item.icon-bg-open",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.faq-item.radius",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.footer.bg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.footer.fg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.footer.radius-top",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.nav-bar.bg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.nav-bar.max-width-rest",
+        "layer": "component",
+        "type": "dimension"
+      },
+      {
+        "path": "component.nav-bar.max-width-stuck",
+        "layer": "component",
+        "type": "dimension"
+      },
+      {
+        "path": "component.nav-bar.radius",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.nav-bar.stuck-shadow",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.palette.bg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.palette.chip-bg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.palette.chip-bg-active",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.palette.radius-finding",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.palette.radius-hero",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.palette.shadow-hero",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.step-card.badge-bg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.step-card.bg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.step-card.radius",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.step-card.visual-bg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.submit-button.bg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.submit-button.bg-disabled",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.submit-button.fg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.submit-button.fg-disabled",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.submit-button.radius",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.tag-pill.bg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.tag-pill.border",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.tag-pill.fg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.tag-pill.radius",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.waitlist-form.bg",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.waitlist-form.border-hero",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.waitlist-form.border-hero-focus",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.waitlist-form.focus-closing",
+        "layer": "component",
+        "type": "alias"
+      },
+      {
+        "path": "component.waitlist-form.max-width",
+        "layer": "component",
+        "type": "dimension"
+      },
+      {
+        "path": "component.waitlist-form.radius",
+        "layer": "component",
+        "type": "alias"
+      }
+    ],
+    "elevation": [
+      {
+        "path": "elevation.button-focus-ring",
+        "layer": "foundation",
+        "type": "shadow"
+      },
+      {
+        "path": "elevation.closing-form-focus",
+        "layer": "foundation",
+        "type": "shadow"
+      },
+      {
+        "path": "elevation.nav-stuck-ring",
+        "layer": "foundation",
+        "type": "shadow"
+      },
+      {
+        "path": "elevation.palette",
+        "layer": "foundation",
+        "type": "shadow"
+      }
+    ],
+    "iconSize": [
+      {
+        "path": "iconSize.button-009",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "iconSize.eyebrow",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "iconSize.faq-ask",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "iconSize.faq-plus",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "iconSize.logo",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "iconSize.magnifier",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "iconSize.tag",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "iconSize.tick",
+        "layer": "foundation",
+        "type": "dimension"
+      }
+    ],
+    "layout": [
+      {
+        "path": "layout.bookmark.bend",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.bookmark.corner",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.bookmark.corner-narrow",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.bookmark.gap",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.bookmark.hold",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.bookmark.notch",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.bookmark.notch-narrow",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.container.2xl",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.container.3xl",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.container.4xl",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.container.6xl",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.container.lg",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.container.xl",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.demo.canvas-height",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.demo.canvas-width",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.nav.height-base",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.nav.height-sm",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.nav.stuck-threshold",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.page.gutter-base",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.page.gutter-sm",
+        "layer": "layout",
+        "type": "dimension"
+      },
+      {
+        "path": "layout.page.max-width",
+        "layer": "layout",
+        "type": "dimension"
+      }
+    ],
+    "motion": [
+      {
+        "path": "motion.duration.blocks-spring",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.duration.faq-panel",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.duration.fast",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.duration.hover-slide",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.duration.line-grow",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.duration.nav-shrink",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.duration.palette-fade",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.duration.reveal",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.duration.sweep",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.easing.bookmark",
+        "layer": "foundation",
+        "type": "cubicBezier"
+      },
+      {
+        "path": "motion.easing.bounce",
+        "layer": "foundation",
+        "type": "linearEasing"
+      },
+      {
+        "path": "motion.easing.hover",
+        "layer": "foundation",
+        "type": "cubicBezier"
+      },
+      {
+        "path": "motion.easing.in-out",
+        "layer": "foundation",
+        "type": "cubicBezier"
+      },
+      {
+        "path": "motion.easing.logo-spring",
+        "layer": "foundation",
+        "type": "cubicBezier"
+      },
+      {
+        "path": "motion.easing.out",
+        "layer": "foundation",
+        "type": "cubicBezier"
+      },
+      {
+        "path": "motion.easing.reveal",
+        "layer": "foundation",
+        "type": "cubicBezier"
+      },
+      {
+        "path": "motion.easing.sweep",
+        "layer": "foundation",
+        "type": "cubicBezier"
+      },
+      {
+        "path": "motion.loop.ask",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.loop.blink",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.loop.feed",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.loop.tap",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.loop.twinkle",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.palette.char-delay",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.palette.hold-open",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.palette.open-delay",
+        "layer": "foundation",
+        "type": "duration"
+      },
+      {
+        "path": "motion.palette.visibility-threshold",
+        "layer": "foundation",
+        "type": "number"
+      },
+      {
+        "path": "motion.physics.gravity-fall",
+        "layer": "foundation",
+        "type": "number"
+      },
+      {
+        "path": "motion.physics.gravity-release",
+        "layer": "foundation",
+        "type": "number"
+      },
+      {
+        "path": "motion.smoothScroll.anchor-offset",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "motion.smoothScroll.lenis-lerp",
+        "layer": "foundation",
+        "type": "number"
+      },
+      {
+        "path": "motion.squircle.corner-smoothing",
+        "layer": "foundation",
+        "type": "number"
+      }
+    ],
+    "radius": [
+      {
+        "path": "radius.button-009",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.chip",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.closing-block",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.demo-12",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.eyebrow",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.hero-bottom",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.icon-tile-lg",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.icon-tile-sm",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.item-20",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.mark",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.panel-16",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.pill",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.section-card",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.step-card",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.submit",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.tap-tile",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "radius.thumb",
+        "layer": "foundation",
+        "type": "dimension"
+      }
+    ],
+    "semantic": [
+      {
+        "path": "semantic.accent.highlight",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.accent.note-rule",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.border.default",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.border.focus",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.border.strong",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.font.body",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.font.heading",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.surface.brand",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.surface.card",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.surface.disabled",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.surface.inset",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.surface.inverse",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.surface.page",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.text.inverse",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.text.on-accent",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.text.primary",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.text.secondary",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.text.soft",
+        "layer": "semantic",
+        "type": "alias"
+      },
+      {
+        "path": "semantic.text.tertiary",
+        "layer": "semantic",
+        "type": "alias"
+      }
+    ],
+    "spacing": [
+      {
+        "path": "spacing.10",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "spacing.13",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "spacing.14",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "spacing.2",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "spacing.20",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "spacing.24",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "spacing.28",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "spacing.3",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "spacing.4",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "spacing.5",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "spacing.6",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "spacing.8",
+        "layer": "foundation",
+        "type": "dimension"
+      }
+    ],
+    "fontFamily": [
+      {
+        "path": "typography.fontFamily.body",
+        "layer": "foundation",
+        "type": "fontFamily"
+      },
+      {
+        "path": "typography.fontFamily.display",
+        "layer": "foundation",
+        "type": "fontFamily"
+      },
+      {
+        "path": "typography.fontFamily.mono",
+        "layer": "foundation",
+        "type": "fontFamily"
+      }
+    ],
+    "fontSize": [
+      {
+        "path": "typography.fontSize.base",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.body-17",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.display-36",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.display-48",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.display-52",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.faq-question",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.hero",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.label-12",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.lead-19",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.meta-13",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.micro-10",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.mockup-greeting-30",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.nav-15",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.palette-question-finding",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.palette-question-hero",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.sm",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.tag-lg",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.fontSize.tag-sm",
+        "layer": "foundation",
+        "type": "dimension"
+      }
+    ],
+    "fontWeight": [
+      {
+        "path": "typography.fontWeight.medium",
+        "layer": "foundation",
+        "type": "fontWeight"
+      },
+      {
+        "path": "typography.fontWeight.regular",
+        "layer": "foundation",
+        "type": "fontWeight"
+      },
+      {
+        "path": "typography.fontWeight.semibold",
+        "layer": "foundation",
+        "type": "fontWeight"
+      }
+    ],
+    "letterSpacing": [
+      {
+        "path": "typography.letterSpacing.eyebrow",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.letterSpacing.heading",
+        "layer": "foundation",
+        "type": "dimension"
+      },
+      {
+        "path": "typography.letterSpacing.label-wider",
+        "layer": "foundation",
+        "type": "dimension"
+      }
+    ],
+    "lineHeight": [
+      {
+        "path": "typography.lineHeight.base",
+        "layer": "foundation",
+        "type": "number"
+      },
+      {
+        "path": "typography.lineHeight.closing",
+        "layer": "foundation",
+        "type": "number"
+      },
+      {
+        "path": "typography.lineHeight.finding",
+        "layer": "foundation",
+        "type": "number"
+      },
+      {
+        "path": "typography.lineHeight.hero",
+        "layer": "foundation",
+        "type": "number"
+      },
+      {
+        "path": "typography.lineHeight.relaxed",
+        "layer": "foundation",
+        "type": "number"
+      },
+      {
+        "path": "typography.lineHeight.saving",
+        "layer": "foundation",
+        "type": "number"
+      },
+      {
+        "path": "typography.lineHeight.snug",
+        "layer": "foundation",
+        "type": "number"
+      }
+    ]
+  }
+}

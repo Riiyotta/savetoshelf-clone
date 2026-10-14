@@ -1,0 +1,154 @@
+{
+  "version": "1.0.0",
+  "generationPolicyEnum": [
+    "may-generate-new",
+    "must-not-reproduce-real-brand",
+    "css-color-block-only",
+    "must-not-reuse-live-endpoint"
+  ],
+  "licensingNote": "Source is a real, live company (Shelf, savetoshelf.com). Generated output must never reproduce the Shelf books logo/wordmark, its favicon/app icons, or third-party brand marks (Instagram, YouTube, Figma, X, LinkedIn glyphs). The original has no raster content images, video or og:image; mockup thumbnails are CSS colour blocks, so no photo role exists. The Plausible analytics script (analytics.mammutstudios.com) is intentionally excluded from the clone and from this repo.",
+  "pinned": {
+    "brand.logo-mark": "must-not-reproduce-real-brand",
+    "brand.app-icons": "must-not-reproduce-real-brand",
+    "icon.third-party-brand": "must-not-reproduce-real-brand",
+    "mockup.thumbnail-color-block": "css-color-block-only",
+    "form.waitlist-endpoint": "must-not-reuse-live-endpoint"
+  },
+  "roles": [
+    {
+      "id": "brand.logo-mark",
+      "generationPolicy": "must-not-reproduce-real-brand",
+      "guidance": "Reference reconstruction only. Generated pages must use brand.placeholder-mark instead.",
+      "usage": [
+        {
+          "cite": "src/components/Nav.jsx:44",
+          "quote": "<LogoBooks className=\"size-7 overflow-visible\" />"
+        },
+        {
+          "cite": "src/components/HeroMockup.jsx:57",
+          "quote": "<img src=\"/assets/logo.svg\""
+        },
+        {
+          "cite": "src/components/Saving.jsx:39",
+          "quote": "<img src=\"/assets/logo.svg\""
+        },
+        {
+          "cite": "src/components/Footer.jsx:7",
+          "quote": "<img src=\"/assets/logo.svg\""
+        },
+        {
+          "cite": "public/assets/MANIFEST.md:20",
+          "quote": "three #1A1A1A \"book\" paths"
+        }
+      ]
+    },
+    {
+      "id": "brand.placeholder-mark",
+      "generationPolicy": "may-generate-new",
+      "guidance": "Policy-only role with no source usage: a neutral, newly drawn mark that replaces brand.logo-mark / brand.app-icons in generated output.",
+      "usage": []
+    },
+    {
+      "id": "brand.app-icons",
+      "generationPolicy": "must-not-reproduce-real-brand",
+      "guidance": "favicon.svg / favicon-32 / apple-touch / 192 / 512 + webmanifest. Reference reconstruction only.",
+      "usage": [
+        {
+          "cite": "index.html:17-20",
+          "quote": "<link rel=\"icon\" type=\"image/svg+xml\" href=\"/assets/icons/favicon.svg\" />"
+        }
+      ]
+    },
+    {
+      "id": "icon.ui-glyph",
+      "generationPolicy": "may-generate-new",
+      "guidance": "Simple UI glyphs (spark, ask, inbox-tray, magnifier, plus, tick, arrow). May be redrawn; animated glyphs must keep their animated sub-path classes (.spark-big/.spark-small, .ask, .tick).",
+      "usage": [
+        {
+          "cite": "src/components/icons.jsx:19-24",
+          "quote": "className=\"spark-big\""
+        },
+        {
+          "cite": "src/components/icons.jsx:39-44",
+          "quote": "export const Ask"
+        }
+      ]
+    },
+    {
+      "id": "icon.source-generic",
+      "generationPolicy": "may-generate-new",
+      "guidance": "Generic source glyphs (globe, mic, document, screenshot, newsletter) used on funnel tags.",
+      "usage": [
+        {
+          "cite": "src/components/Funnel.jsx:26-34",
+          "quote": "['Voice note', <TagMic"
+        }
+      ]
+    },
+    {
+      "id": "icon.third-party-brand",
+      "generationPolicy": "must-not-reproduce-real-brand",
+      "guidance": "Instagram, YouTube, Figma, X brand glyphs and the LinkedIn 'in' glyph on funnel tags. Generated pages must swap them for icon.source-generic.",
+      "usage": [
+        {
+          "cite": "src/components/Funnel.jsx:24",
+          "quote": "['Instagram', <TagInstagram"
+        },
+        {
+          "cite": "src/components/Funnel.jsx:32",
+          "quote": "['YouTube', <TagYouTube"
+        },
+        {
+          "cite": "src/components/Funnel.jsx:35",
+          "quote": "['Figma file', <TagFigma"
+        },
+        {
+          "cite": "src/components/Funnel.jsx:31",
+          "quote": "['X post', <TagX"
+        },
+        {
+          "cite": "src/components/Funnel.jsx:25",
+          "quote": "['LinkedIn', <TagLinkedIn"
+        }
+      ]
+    },
+    {
+      "id": "mockup.thumbnail-color-block",
+      "generationPolicy": "css-color-block-only",
+      "guidance": "Every thumbnail in the app mockup and palettes is a flat CSS colour block. Never fabricate screenshots or photos; pick a colorToken from the closed thumb set.",
+      "usage": [
+        {
+          "cite": "src/components/HeroMockup.jsx:142",
+          "quote": "<p className={`mt-4 h-[132px] rounded-lg ${thumb}`} />"
+        },
+        {
+          "cite": "src/components/Palette.jsx:161",
+          "quote": "<span className={`shrink-0 rounded-md ${thumb} ${h.thumb}`} />"
+        },
+        {
+          "cite": "public/assets/MANIFEST.md:5",
+          "quote": "Every \"screenshot\"/thumbnail in the app mockups is a flat CSS colour block"
+        }
+      ]
+    },
+    {
+      "id": "form.waitlist-endpoint",
+      "generationPolicy": "must-not-reuse-live-endpoint",
+      "guidance": "The original POSTs {email} JSON to the live /api/waitlist (a real signup). The clone stubs it locally. Generated pages must use submitTarget 'local-stub' and must never point at the live endpoint.",
+      "usage": [
+        {
+          "cite": "Shelf_ Everything you saved. Finally findable..html:62",
+          "quote": "fetch(\"/api/waitlist\",{method:\"POST\",headers:{\"content-type\":\"application/json\"}"
+        },
+        {
+          "cite": "src/components/WaitlistForm.jsx:6-14",
+          "quote": "The original POSTs {email} to /api/waitlist. Per the brief this clone must"
+        },
+        {
+          "cite": "CLONE_SPEC.md:610",
+          "quote": "I did not submit the `/api/waitlist` POST (doing so creates a real signup)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "semantic": {
+    "text": {
+      "primary": {
+        "$type": "alias",
+        "$value": "{color.text.default}",
+        "cite": [
+          {
+            "cite": "src/index.css:42",
+            "quote": "color: var(--text);"
+          }
+        ]
+      },
+      "secondary": {
+        "$type": "alias",
+        "$value": "{color.text.muted}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:212",
+            "quote": "colour #76766e, `text-wrap: pretty`"
+          }
+        ]
+      },
+      "tertiary": {
+        "$type": "alias",
+        "$value": "{color.text.faint}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:217",
+            "quote": "Placeholder colour #a5a59c"
+          }
+        ]
+      },
+      "on-accent": {
+        "$type": "alias",
+        "$value": "{color.text.default}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:330",
+            "quote": "but with bg #9ee86f and colour #1a1a18"
+          }
+        ]
+      },
+      "inverse": {
+        "$type": "alias",
+        "$value": "{color.surface.raised}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:219",
+            "quote": "Enabled: bg #1a1a18, text #fcfcfb"
+          }
+        ]
+      },
+      "soft": {
+        "$type": "alias",
+        "$value": "{color.alpha.text-70}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:532",
+            "quote": "colour **rgba(26,26,24,.7)**"
+          }
+        ]
+      }
+    },
+    "surface": {
+      "page": {
+        "$type": "alias",
+        "$value": "{color.surface.default}",
+        "cite": [
+          {
+            "cite": "src/index.css:41",
+            "quote": "background: var(--surface);"
+          }
+        ]
+      },
+      "card": {
+        "$type": "alias",
+        "$value": "{color.surface.raised}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:56",
+            "quote": "cards, hero block, nav bar"
+          }
+        ]
+      },
+      "inset": {
+        "$type": "alias",
+        "$value": "{color.surface.sunken}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:57",
+            "quote": "eyebrow pill, sunken chips"
+          }
+        ]
+      },
+      "brand": {
+        "$type": "alias",
+        "$value": "{color.accent.default}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:60",
+            "quote": "lime green: CTA, highlights, closing block"
+          }
+        ]
+      },
+      "inverse": {
+        "$type": "alias",
+        "$value": "{color.text.default}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:460",
+            "quote": "bg #1a1a18, text #f2f1ed"
+          }
+        ]
+      },
+      "disabled": {
+        "$type": "alias",
+        "$value": "{color.surface.default}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:219",
+            "quote": "Disabled (the initial state): bg #f2f1ed, text #a5a59c"
+          }
+        ]
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "alias",
+        "$value": "{color.border.default}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:58",
+            "quote": "| --border | #e1e0da | 1px borders |"
+          }
+        ]
+      },
+      "strong": {
+        "$type": "alias",
+        "$value": "{color.border.strong}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:59-60",
+            "quote": "dashed border, gradient line"
+          }
+        ]
+      },
+      "focus": {
+        "$type": "alias",
+        "$value": "{color.text.muted}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:215",
+            "quote": "On `:focus-within` the border colour becomes #76766e"
+          }
+        ]
+      }
+    },
+    "accent": {
+      "highlight": {
+        "$type": "alias",
+        "$value": "{color.accent.default}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:208",
+            "quote": "background: #9ee86f"
+          }
+        ]
+      },
+      "note-rule": {
+        "$type": "alias",
+        "$value": "{color.accent.default}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:260",
+            "quote": "border-left 2px #9ee86f"
+          }
+        ]
+      }
+    },
+    "font": {
+      "heading": {
+        "$type": "alias",
+        "$value": "{typography.fontFamily.display}",
+        "cite": [
+          {
+            "cite": "src/index.css:46",
+            "quote": "font-family: var(--font-display)"
+          }
+        ]
+      },
+      "body": {
+        "$type": "alias",
+        "$value": "{typography.fontFamily.body}",
+        "cite": [
+          {
+            "cite": "src/index.css:43",
+            "quote": "font-family: var(--font-body);"
+          }
+        ]
+      }
+    }
+  }
+}

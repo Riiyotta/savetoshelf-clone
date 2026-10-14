@@ -1,0 +1,32 @@
+{
+  "id": "primitive.icon",
+  "kind": "primitive",
+  "contractVersion": "1.0.0",
+  "purpose": "Inline SVG glyph rendered with currentColor; asset role decides whether it may be redrawn.",
+  "implementedBy": "src/components/icons.jsx",
+  "tokens": [
+    "iconSize.eyebrow",
+    "iconSize.magnifier",
+    "iconSize.faq-plus",
+    "iconSize.tick",
+    "iconSize.tag",
+    "iconSize.button-009"
+  ],
+  "props": [
+    "assetRole",
+    "size"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/icons.jsx:1-2",
+      "quote": "Inline SVGs from public/assets/svg/ (MANIFEST.md). Kept inline because CSS"
+    },
+    {
+      "cite": "public/assets/MANIFEST.md:32",
+      "quote": "On the original page these are all inline `<svg>` elements"
+    }
+  ]
+}

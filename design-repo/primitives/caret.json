@@ -1,0 +1,25 @@
+{
+  "id": "primitive.caret",
+  "kind": "primitive",
+  "contractVersion": "1.0.0",
+  "purpose": "1px blinking text caret (saving step 3) and the non-blinking palette caret.",
+  "implementedBy": "src/components/Saving.jsx",
+  "tokens": [
+    "motion.loop.blink"
+  ],
+  "props": [],
+  "variants": [
+    "blinking",
+    "palette-static"
+  ],
+  "evidence": [
+    {
+      "cite": "src/index.css:268-277",
+      "quote": "animation: blink 1.1s steps(1) infinite;"
+    },
+    {
+      "cite": "src/components/Palette.jsx:130-134",
+      "quote": "data-palette-caret=\"\""
+    }
+  ]
+}

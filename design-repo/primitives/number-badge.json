@@ -1,0 +1,23 @@
+{
+  "id": "primitive.number-badge",
+  "kind": "primitive",
+  "contractVersion": "1.0.0",
+  "purpose": "30x30 ink squircle step number (tabular-nums).",
+  "implementedBy": "src/components/Saving.jsx",
+  "tokens": [
+    "component.step-card.badge-bg",
+    "radius.eyebrow"
+  ],
+  "props": [
+    "n"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Saving.jsx:94-100",
+      "quote": "size-[30px] shrink-0 place-items-center rounded-[10px] bg-text"
+    }
+  ]
+}

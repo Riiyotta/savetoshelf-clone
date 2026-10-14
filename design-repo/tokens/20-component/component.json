@@ -1,0 +1,486 @@
+{
+  "component": {
+    "nav-bar": {
+      "bg": {
+        "$type": "alias",
+        "$value": "{semantic.surface.card}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:136",
+            "quote": "Background #fcfcfb, radius 16px"
+          }
+        ]
+      },
+      "radius": {
+        "$type": "alias",
+        "$value": "{radius.panel-16}",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:136",
+            "quote": "radius 16px"
+          }
+        ]
+      },
+      "max-width-rest": {
+        "$type": "dimension",
+        "$value": "56rem",
+        "cite": [
+          {
+            "cite": "src/index.css:54",
+            "quote": "max-width: 56rem;"
+          }
+        ]
+      },
+      "max-width-stuck": {
+        "$type": "dimension",
+        "$value": "46rem",
+        "cite": [
+          {
+            "cite": "src/index.css:58",
+            "quote": "max-width: 46rem;"
+          }
+        ]
+      },
+      "stuck-shadow": {
+        "$type": "alias",
+        "$value": "{elevation.nav-stuck-ring}",
+        "cite": [
+          {
+            "cite": "src/index.css:60",
+            "quote": "box-shadow: 0 0 0 1px"
+          }
+        ]
+      }
+    },
+    "button-009": {
+      "bg": {
+        "$type": "alias",
+        "$value": "{semantic.surface.brand}",
+        "cite": [
+          {
+            "cite": "src/index.css:81",
+            "quote": "--button-009-color-background: var(--accent);"
+          }
+        ]
+      },
+      "fg": {
+        "$type": "alias",
+        "$value": "{semantic.text.on-accent}",
+        "cite": [
+          {
+            "cite": "src/index.css:80",
+            "quote": "--button-009-color: var(--text);"
+          }
+        ]
+      },
+      "radius": {
+        "$type": "alias",
+        "$value": "{radius.button-009}",
+        "cite": [
+          {
+            "cite": "src/index.css:83",
+            "quote": "--button-009-border-radius: .9rem;"
+          }
+        ]
+      },
+      "click-scale": {
+        "$type": "string",
+        "$value": ".955 .925",
+        "cite": [
+          {
+            "cite": "src/index.css:92",
+            "quote": "--button-009-click-scale: .955 .925;"
+          }
+        ]
+      }
+    },
+    "submit-button": {
+      "bg": {
+        "$type": "alias",
+        "$value": "{semantic.surface.inverse}",
+        "cite": [
+          {
+            "cite": "src/components/WaitlistForm.jsx:91",
+            "quote": "bg-text px-6 py-3"
+          }
+        ]
+      },
+      "fg": {
+        "$type": "alias",
+        "$value": "{semantic.text.inverse}",
+        "cite": [
+          {
+            "cite": "src/components/WaitlistForm.jsx:91",
+            "quote": "text-surface-raised"
+          }
+        ]
+      },
+      "bg-disabled": {
+        "$type": "alias",
+        "$value": "{semantic.surface.disabled}",
+        "cite": [
+          {
+            "cite": "src/components/WaitlistForm.jsx:91",
+            "quote": "disabled:bg-surface"
+          }
+        ]
+      },
+      "fg-disabled": {
+        "$type": "alias",
+        "$value": "{semantic.text.tertiary}",
+        "cite": [
+          {
+            "cite": "src/components/WaitlistForm.jsx:91",
+            "quote": "disabled:text-text-faint"
+          }
+        ]
+      },
+      "radius": {
+        "$type": "alias",
+        "$value": "{radius.submit}",
+        "cite": [
+          {
+            "cite": "src/components/WaitlistForm.jsx:91",
+            "quote": "rounded-[0.7rem]"
+          }
+        ]
+      }
+    },
+    "waitlist-form": {
+      "bg": {
+        "$type": "alias",
+        "$value": "{semantic.surface.card}",
+        "cite": [
+          {
+            "cite": "src/components/WaitlistForm.jsx:71",
+            "quote": "bg-surface-raised p-2"
+          }
+        ]
+      },
+      "border-hero": {
+        "$type": "alias",
+        "$value": "{semantic.border.default}",
+        "cite": [
+          {
+            "cite": "src/components/WaitlistForm.jsx:61",
+            "quote": "border border-border focus-within:border-text-muted"
+          }
+        ]
+      },
+      "border-hero-focus": {
+        "$type": "alias",
+        "$value": "{semantic.border.focus}",
+        "cite": [
+          {
+            "cite": "src/components/WaitlistForm.jsx:61",
+            "quote": "focus-within:border-text-muted"
+          }
+        ]
+      },
+      "focus-closing": {
+        "$type": "alias",
+        "$value": "{elevation.closing-form-focus}",
+        "cite": [
+          {
+            "cite": "src/components/WaitlistForm.jsx:62",
+            "quote": "focus-within:ring-1 focus-within:ring-text/60"
+          }
+        ]
+      },
+      "radius": {
+        "$type": "alias",
+        "$value": "{radius.panel-16}",
+        "cite": [
+          {
+            "cite": "src/components/WaitlistForm.jsx:71",
+            "quote": "rounded-[1rem]"
+          }
+        ]
+      },
+      "max-width": {
+        "$type": "dimension",
+        "$value": "460px",
+        "cite": [
+          {
+            "cite": "src/components/WaitlistForm.jsx:71",
+            "quote": "max-w-[460px]"
+          }
+        ]
+      }
+    },
+    "eyebrow": {
+      "bg-sunken": {
+        "$type": "alias",
+        "$value": "{semantic.surface.inset}",
+        "cite": [
+          {
+            "cite": "src/components/Eyebrow.jsx:6",
+            "quote": "tone === 'sunken' ? 'bg-surface-sunken' : 'bg-accent'"
+          }
+        ]
+      },
+      "bg-accent": {
+        "$type": "alias",
+        "$value": "{semantic.surface.brand}",
+        "cite": [
+          {
+            "cite": "src/components/Eyebrow.jsx:6",
+            "quote": "'bg-accent'"
+          }
+        ]
+      },
+      "radius": {
+        "$type": "alias",
+        "$value": "{radius.eyebrow}",
+        "cite": [
+          {
+            "cite": "src/components/Eyebrow.jsx:10",
+            "quote": "rounded-[10px]"
+          }
+        ]
+      }
+    },
+    "palette": {
+      "bg": {
+        "$type": "alias",
+        "$value": "{semantic.surface.card}",
+        "cite": [
+          {
+            "cite": "src/components/Palette.jsx:124",
+            "quote": "overflow-hidden border border-border bg-surface-raised"
+          }
+        ]
+      },
+      "radius-hero": {
+        "$type": "alias",
+        "$value": "{radius.panel-16}",
+        "cite": [
+          {
+            "cite": "src/components/Palette.jsx:124",
+            "quote": "rounded-2xl shadow-palette"
+          }
+        ]
+      },
+      "radius-finding": {
+        "$type": "alias",
+        "$value": "{radius.item-20}",
+        "cite": [
+          {
+            "cite": "src/components/Palette.jsx:124",
+            "quote": "'rounded-[1.25rem]'"
+          }
+        ]
+      },
+      "shadow-hero": {
+        "$type": "alias",
+        "$value": "{elevation.palette}",
+        "cite": [
+          {
+            "cite": "src/components/Palette.jsx:124",
+            "quote": "shadow-palette"
+          }
+        ]
+      },
+      "chip-bg": {
+        "$type": "alias",
+        "$value": "{semantic.surface.page}",
+        "cite": [
+          {
+            "cite": "src/components/Palette.jsx:148",
+            "quote": "'bg-surface text-text-muted'"
+          }
+        ]
+      },
+      "chip-bg-active": {
+        "$type": "alias",
+        "$value": "{semantic.surface.inset}",
+        "cite": [
+          {
+            "cite": "src/components/Palette.jsx:148",
+            "quote": "'bg-surface-sunken text-text'"
+          }
+        ]
+      }
+    },
+    "tag-pill": {
+      "bg": {
+        "$type": "alias",
+        "$value": "{semantic.surface.page}",
+        "cite": [
+          {
+            "cite": "src/components/Funnel.jsx:66",
+            "quote": "rounded-full border border-border bg-surface"
+          }
+        ]
+      },
+      "border": {
+        "$type": "alias",
+        "$value": "{semantic.border.default}",
+        "cite": [
+          {
+            "cite": "src/components/Funnel.jsx:66",
+            "quote": "border border-border"
+          }
+        ]
+      },
+      "fg": {
+        "$type": "alias",
+        "$value": "{semantic.text.secondary}",
+        "cite": [
+          {
+            "cite": "src/components/Funnel.jsx:66",
+            "quote": "text-text-muted"
+          }
+        ]
+      },
+      "radius": {
+        "$type": "alias",
+        "$value": "{radius.pill}",
+        "cite": [
+          {
+            "cite": "src/components/Funnel.jsx:66",
+            "quote": "rounded-full"
+          }
+        ]
+      }
+    },
+    "step-card": {
+      "bg": {
+        "$type": "alias",
+        "$value": "{semantic.surface.page}",
+        "cite": [
+          {
+            "cite": "src/components/Saving.jsx:89",
+            "quote": "rounded-[1.5rem] bg-surface p-4"
+          }
+        ]
+      },
+      "radius": {
+        "$type": "alias",
+        "$value": "{radius.step-card}",
+        "cite": [
+          {
+            "cite": "src/components/Saving.jsx:89",
+            "quote": "rounded-[1.5rem]"
+          }
+        ]
+      },
+      "visual-bg": {
+        "$type": "alias",
+        "$value": "{semantic.surface.card}",
+        "cite": [
+          {
+            "cite": "src/components/Saving.jsx:13",
+            "quote": "rounded-2xl bg-surface-raised"
+          }
+        ]
+      },
+      "badge-bg": {
+        "$type": "alias",
+        "$value": "{semantic.surface.inverse}",
+        "cite": [
+          {
+            "cite": "src/components/Saving.jsx:96",
+            "quote": "bg-text text-[14px] font-semibold tabular-nums text-surface"
+          }
+        ]
+      }
+    },
+    "faq-item": {
+      "bg": {
+        "$type": "alias",
+        "$value": "{semantic.surface.card}",
+        "cite": [
+          {
+            "cite": "src/components/Faq.jsx:52",
+            "quote": "rounded-[1.25rem] bg-surface-raised"
+          }
+        ]
+      },
+      "radius": {
+        "$type": "alias",
+        "$value": "{radius.item-20}",
+        "cite": [
+          {
+            "cite": "src/components/Faq.jsx:52",
+            "quote": "rounded-[1.25rem]"
+          }
+        ]
+      },
+      "icon-bg": {
+        "$type": "alias",
+        "$value": "{semantic.surface.page}",
+        "cite": [
+          {
+            "cite": "src/components/Faq.jsx:65",
+            "quote": "rounded-[10px] bg-surface text-text-muted"
+          }
+        ]
+      },
+      "icon-bg-open": {
+        "$type": "alias",
+        "$value": "{semantic.surface.brand}",
+        "cite": [
+          {
+            "cite": "src/index.css:287",
+            "quote": ".faq .item.is-open .icon { background: var(--accent); color: var(--text); }"
+          }
+        ]
+      }
+    },
+    "closing-block": {
+      "bg": {
+        "$type": "alias",
+        "$value": "{semantic.surface.brand}",
+        "cite": [
+          {
+            "cite": "src/components/Waitlist.jsx:31",
+            "quote": "rounded-[1.75rem] bg-accent"
+          }
+        ]
+      },
+      "radius": {
+        "$type": "alias",
+        "$value": "{radius.closing-block}",
+        "cite": [
+          {
+            "cite": "src/components/Waitlist.jsx:31",
+            "quote": "rounded-[1.75rem]"
+          }
+        ]
+      }
+    },
+    "footer": {
+      "bg": {
+        "$type": "alias",
+        "$value": "{semantic.surface.card}",
+        "cite": [
+          {
+            "cite": "src/components/Footer.jsx:5",
+            "quote": "rounded-t-[2rem] bg-surface-raised"
+          }
+        ]
+      },
+      "radius-top": {
+        "$type": "alias",
+        "$value": "{radius.section-card}",
+        "cite": [
+          {
+            "cite": "src/components/Footer.jsx:5",
+            "quote": "rounded-t-[2rem]"
+          }
+        ]
+      },
+      "fg": {
+        "$type": "alias",
+        "$value": "{semantic.text.tertiary}",
+        "cite": [
+          {
+            "cite": "src/components/Footer.jsx:6",
+            "quote": "text-sm text-text-faint"
+          }
+        ]
+      }
+    }
+  }
+}

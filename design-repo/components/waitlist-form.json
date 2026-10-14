@@ -1,0 +1,32 @@
+{
+  "id": "component.waitlist-form",
+  "kind": "component",
+  "contractVersion": "1.0.0",
+  "purpose": "Email + submit form with regex-gated enable, busy label, done card (fade + tick draw) and error note. Variants: hero (bordered, centred) and closing (ring focus, left-aligned). Submission is a LOCAL STUB.",
+  "implementedBy": "src/components/WaitlistForm.jsx",
+  "tokens": [
+    "component.waitlist-form.bg",
+    "component.waitlist-form.border-hero",
+    "component.waitlist-form.border-hero-focus",
+    "component.waitlist-form.focus-closing",
+    "component.waitlist-form.radius",
+    "component.waitlist-form.max-width"
+  ],
+  "props": [
+    "form (definitions.waitlistForm)"
+  ],
+  "variants": [
+    "hero",
+    "closing"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/WaitlistForm.jsx:5-14",
+      "quote": "async function submitWaitlist(email) {"
+    },
+    {
+      "cite": "src/components/WaitlistForm.jsx:16",
+      "quote": "const EMAIL_RE = /^[^\\s@]+@[^\\s@.]+(\\.[^\\s@.]+)+$/"
+    }
+  ]
+}

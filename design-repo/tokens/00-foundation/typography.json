@@ -1,0 +1,354 @@
+{
+  "typography": {
+    "fontFamily": {
+      "body": {
+        "$type": "fontFamily",
+        "$value": "\"Switzer\", ui-sans-serif, system-ui, sans-serif",
+        "cite": [
+          {
+            "cite": "src/index.css:11",
+            "quote": "--font-body: \"Switzer\", ui-sans-serif, system-ui, sans-serif;"
+          }
+        ]
+      },
+      "display": {
+        "$type": "fontFamily",
+        "$value": "\"General Sans\", ui-sans-serif, system-ui, sans-serif",
+        "cite": [
+          {
+            "cite": "src/index.css:12",
+            "quote": "--font-display: \"General Sans\", ui-sans-serif, system-ui, sans-serif;"
+          }
+        ]
+      },
+      "mono": {
+        "$type": "fontFamily",
+        "$value": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:46",
+            "quote": "`<kbd>` uses the Tailwind mono stack"
+          }
+        ]
+      }
+    },
+    "fontWeight": {
+      "regular": {
+        "$type": "fontWeight",
+        "$value": 400,
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:45",
+            "quote": "Switzer 400, 500, 600"
+          }
+        ]
+      },
+      "medium": {
+        "$type": "fontWeight",
+        "$value": 500,
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:45",
+            "quote": "General Sans 500 (FAQ questions)"
+          }
+        ]
+      },
+      "semibold": {
+        "$type": "fontWeight",
+        "$value": 600,
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:45",
+            "quote": "600 (all headings)"
+          }
+        ]
+      }
+    },
+    "fontSize": {
+      "hero": {
+        "$type": "dimension",
+        "$value": "clamp(2.75rem, 8.5vw, 5.25rem)",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:200",
+            "quote": "`font-size: clamp(2.75rem, 8.5vw, 5.25rem)`"
+          }
+        ]
+      },
+      "display-52": {
+        "$type": "dimension",
+        "$value": "52px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:452",
+            "quote": "52px/56.16px (`sm:text-[3.25rem]`"
+          }
+        ]
+      },
+      "display-48": {
+        "$type": "dimension",
+        "$value": "48px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:335",
+            "quote": "General Sans 600, 48px/48px"
+          }
+        ]
+      },
+      "display-36": {
+        "$type": "dimension",
+        "$value": "36px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:335",
+            "quote": "36px/40px below 640px"
+          }
+        ]
+      },
+      "mockup-greeting-30": {
+        "$type": "dimension",
+        "$value": "30px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:251",
+            "quote": "30px/37.5px, 600"
+          }
+        ]
+      },
+      "tag-lg": {
+        "$type": "dimension",
+        "$value": "1.375rem",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:394",
+            "quote": "font 1.375rem (22px/33px)"
+          }
+        ]
+      },
+      "palette-question-finding": {
+        "$type": "dimension",
+        "$value": "21px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:430",
+            "quote": "Question font 21px/31.5px"
+          }
+        ]
+      },
+      "palette-question-hero": {
+        "$type": "dimension",
+        "$value": "20px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:271",
+            "quote": "question text 20px/30px"
+          }
+        ]
+      },
+      "lead-19": {
+        "$type": "dimension",
+        "$value": "19px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:212",
+            "quote": "Switzer 19px, line-height 1.625"
+          }
+        ]
+      },
+      "faq-question": {
+        "$type": "dimension",
+        "$value": "18px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:499",
+            "quote": "18px/28px at 640px and up"
+          }
+        ]
+      },
+      "body-17": {
+        "$type": "dimension",
+        "$value": "17px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:336",
+            "quote": "Switzer 17px/27.625px"
+          }
+        ]
+      },
+      "base": {
+        "$type": "dimension",
+        "$value": "16px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:84",
+            "quote": "Switzer 16px/24px"
+          }
+        ]
+      },
+      "nav-15": {
+        "$type": "dimension",
+        "$value": "15px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:145",
+            "quote": "Font Switzer 15px/22.5px"
+          }
+        ]
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": "14px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:193",
+            "quote": "Switzer 14px/21px"
+          }
+        ]
+      },
+      "meta-13": {
+        "$type": "dimension",
+        "$value": "13px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:299",
+            "quote": "span date 13px/19.5px"
+          }
+        ]
+      },
+      "label-12": {
+        "$type": "dimension",
+        "$value": "12px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:248",
+            "quote": "label 12px/18px, uppercase"
+          }
+        ]
+      },
+      "tag-sm": {
+        "$type": "dimension",
+        "$value": ".8rem",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:395",
+            "quote": "font .8rem (12.8px/19.2px)"
+          }
+        ]
+      },
+      "micro-10": {
+        "$type": "dimension",
+        "$value": "10px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:480",
+            "quote": "\"WHY THIS\": 10px/15px"
+          }
+        ]
+      }
+    },
+    "lineHeight": {
+      "hero": {
+        "$type": "number",
+        "$value": 1.02,
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:200",
+            "quote": "line-height 1.02"
+          }
+        ]
+      },
+      "closing": {
+        "$type": "number",
+        "$value": 1.05,
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:531",
+            "quote": "line-height 1.05 (50.4px)"
+          }
+        ]
+      },
+      "saving": {
+        "$type": "number",
+        "$value": 1.08,
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:452",
+            "quote": "leading 1.08"
+          }
+        ]
+      },
+      "finding": {
+        "$type": "number",
+        "$value": 1.1,
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:424",
+            "quote": "line-height 1.1 (52.8px)"
+          }
+        ]
+      },
+      "snug": {
+        "$type": "number",
+        "$value": 1.375,
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:125",
+            "quote": "`leading-snug` = 1.375"
+          }
+        ]
+      },
+      "base": {
+        "$type": "number",
+        "$value": 1.5,
+        "cite": [
+          {
+            "cite": "src/index.css:39",
+            "quote": "html { line-height: 1.5; }"
+          }
+        ]
+      },
+      "relaxed": {
+        "$type": "number",
+        "$value": 1.625,
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:125",
+            "quote": "`leading-relaxed` = 1.625"
+          }
+        ]
+      }
+    },
+    "letterSpacing": {
+      "heading": {
+        "$type": "dimension",
+        "$value": "-0.03em",
+        "cite": [
+          {
+            "cite": "src/index.css:46",
+            "quote": "h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.03em; }"
+          }
+        ]
+      },
+      "eyebrow": {
+        "$type": "dimension",
+        "$value": "-0.01em",
+        "cite": [
+          {
+            "cite": "src/components/Eyebrow.jsx:10",
+            "quote": "tracking-[-0.01em]"
+          }
+        ]
+      },
+      "label-wider": {
+        "$type": "dimension",
+        "$value": "0.05em",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:248",
+            "quote": "ls 0.6px (`tracking-wider` .05em)"
+          }
+        ]
+      }
+    }
+  }
+}

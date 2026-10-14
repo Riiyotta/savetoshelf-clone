@@ -1,0 +1,328 @@
+{
+  "motion": {
+    "easing": {
+      "out": {
+        "$type": "cubicBezier",
+        "$value": "cubic-bezier(0, 0, .2, 1)",
+        "cite": [
+          {
+            "cite": "src/index.css:26",
+            "quote": "--ease-out: cubic-bezier(0, 0, .2, 1);"
+          }
+        ]
+      },
+      "in-out": {
+        "$type": "cubicBezier",
+        "$value": "cubic-bezier(.4, 0, .2, 1)",
+        "cite": [
+          {
+            "cite": "src/index.css:27",
+            "quote": "--ease-in-out: cubic-bezier(.4, 0, .2, 1);"
+          }
+        ]
+      },
+      "bounce": {
+        "$type": "linearEasing",
+        "$value": "var(--ease-bounce) linear(...) spring, 47 stops",
+        "cite": [
+          {
+            "cite": "src/index.css:28",
+            "quote": "--ease-bounce: linear(0 0%, .001 1.1%"
+          }
+        ]
+      },
+      "hover": {
+        "$type": "cubicBezier",
+        "$value": "cubic-bezier(.32, .72, 0, 1)",
+        "cite": [
+          {
+            "cite": "src/index.css:93",
+            "quote": "--button-009-ease-hover: cubic-bezier(.32, .72, 0, 1);"
+          }
+        ]
+      },
+      "reveal": {
+        "$type": "cubicBezier",
+        "$value": "cubic-bezier(.22,1,.36,1)",
+        "cite": [
+          {
+            "cite": "src/index.css:230",
+            "quote": "transition: translate .7s cubic-bezier(.22,1,.36,1)"
+          }
+        ]
+      },
+      "sweep": {
+        "$type": "cubicBezier",
+        "$value": "cubic-bezier(.625,.05,0,1)",
+        "cite": [
+          {
+            "cite": "src/index.css:197",
+            "quote": "animation: sweep .95s cubic-bezier(.625,.05,0,1) .25s forwards;"
+          }
+        ]
+      },
+      "bookmark": {
+        "$type": "cubicBezier",
+        "$value": "cubic-bezier(.45,0,.55,1)",
+        "cite": [
+          {
+            "cite": "src/lib/bookmark.js:35",
+            "quote": "const ease = cubicBezier(0.45, 0, 0.55, 1)"
+          }
+        ]
+      },
+      "logo-spring": {
+        "$type": "cubicBezier",
+        "$value": "cubic-bezier(.34,1.4,.64,1)",
+        "cite": [
+          {
+            "cite": "src/index.css:67",
+            "quote": "rotate .5s cubic-bezier(.34,1.4,.64,1)"
+          }
+        ]
+      }
+    },
+    "duration": {
+      "fast": {
+        "$type": "duration",
+        "$value": "150ms",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:75",
+            "quote": "This is also Tailwind's default transition easing, at 150ms."
+          }
+        ]
+      },
+      "palette-fade": {
+        "$type": "duration",
+        "$value": "300ms",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:290",
+            "quote": "opacity .3s cubic-bezier(.4,0,.2,1)"
+          }
+        ]
+      },
+      "hover-slide": {
+        "$type": "duration",
+        "$value": "500ms",
+        "cite": [
+          {
+            "cite": "src/index.css:140",
+            "quote": "transition: translate .5s var(--button-009-ease-hover)"
+          }
+        ]
+      },
+      "nav-shrink": {
+        "$type": "duration",
+        "$value": "600ms",
+        "cite": [
+          {
+            "cite": "src/index.css:55",
+            "quote": "transition: max-width .6s cubic-bezier(.32,.72,0,1), box-shadow .4s ease-out;"
+          }
+        ]
+      },
+      "reveal": {
+        "$type": "duration",
+        "$value": "700ms",
+        "cite": [
+          {
+            "cite": "src/index.css:230",
+            "quote": "translate .7s"
+          }
+        ]
+      },
+      "faq-panel": {
+        "$type": "duration",
+        "$value": "750ms",
+        "cite": [
+          {
+            "cite": "src/index.css:283",
+            "quote": "transition: grid-template-rows .75s var(--ease-bounce);"
+          }
+        ]
+      },
+      "line-grow": {
+        "$type": "duration",
+        "$value": "800ms",
+        "cite": [
+          {
+            "cite": "src/index.css:246",
+            "quote": "transition: scale .8s cubic-bezier(.45,0,.55,1);"
+          }
+        ]
+      },
+      "sweep": {
+        "$type": "duration",
+        "$value": "950ms",
+        "cite": [
+          {
+            "cite": "src/index.css:197",
+            "quote": "sweep .95s"
+          }
+        ]
+      },
+      "blocks-spring": {
+        "$type": "duration",
+        "$value": "1100ms",
+        "cite": [
+          {
+            "cite": "src/index.css:295",
+            "quote": "transition: flex-basis 1.1s var(--ease-bounce);"
+          }
+        ]
+      }
+    },
+    "loop": {
+      "twinkle": {
+        "$type": "duration",
+        "$value": "2.4s",
+        "cite": [
+          {
+            "cite": "src/index.css:200",
+            "quote": ".spark-big { animation: twinkle-big 2.4s ease-in-out infinite; }"
+          }
+        ]
+      },
+      "tap": {
+        "$type": "duration",
+        "$value": "2.6s",
+        "cite": [
+          {
+            "cite": "src/index.css:266",
+            "quote": ".tap { animation: tap 2.6s ease-out infinite; }"
+          }
+        ]
+      },
+      "ask": {
+        "$type": "duration",
+        "$value": "2.8s",
+        "cite": [
+          {
+            "cite": "src/index.css:237",
+            "quote": "animation: ask 2.8s ease-in-out infinite;"
+          }
+        ]
+      },
+      "feed": {
+        "$type": "duration",
+        "$value": "9s",
+        "cite": [
+          {
+            "cite": "src/index.css:264",
+            "quote": ".feed-strip { animation: scroll-feed 9s linear infinite; }"
+          }
+        ]
+      },
+      "blink": {
+        "$type": "duration",
+        "$value": "1.1s",
+        "cite": [
+          {
+            "cite": "src/index.css:275",
+            "quote": "animation: blink 1.1s steps(1) infinite;"
+          }
+        ]
+      }
+    },
+    "smoothScroll": {
+      "lenis-lerp": {
+        "$type": "number",
+        "$value": 0.1,
+        "cite": [
+          {
+            "cite": "src/App.jsx:16",
+            "quote": "new Lenis({ lerp: 0.1, smoothWheel: true, syncTouch: false, anchors: { offset: -100 } })"
+          }
+        ]
+      },
+      "anchor-offset": {
+        "$type": "dimension",
+        "$value": "-100px",
+        "cite": [
+          {
+            "cite": "src/App.jsx:16",
+            "quote": "anchors: { offset: -100 }"
+          }
+        ]
+      }
+    },
+    "physics": {
+      "gravity-fall": {
+        "$type": "number",
+        "$value": 2.4,
+        "cite": [
+          {
+            "cite": "src/lib/bookmark.js:124",
+            "quote": "const G_FALL = 2.4"
+          }
+        ]
+      },
+      "gravity-release": {
+        "$type": "number",
+        "$value": -3.2,
+        "cite": [
+          {
+            "cite": "src/lib/bookmark.js:125",
+            "quote": "const G_RELEASE = -3.2"
+          }
+        ]
+      }
+    },
+    "squircle": {
+      "corner-smoothing": {
+        "$type": "number",
+        "$value": 0.6,
+        "cite": [
+          {
+            "cite": "src/components/Squircle.jsx:21",
+            "quote": "cornerSmoothing: parseFloat(el.dataset.squircle ?? '') || 0.6,"
+          }
+        ]
+      }
+    },
+    "palette": {
+      "open-delay": {
+        "$type": "duration",
+        "$value": "700ms",
+        "cite": [
+          {
+            "cite": "src/components/Palette.jsx:77",
+            "quote": "await sleep(700)"
+          }
+        ]
+      },
+      "char-delay": {
+        "$type": "duration",
+        "$value": "38ms + random*40ms",
+        "cite": [
+          {
+            "cite": "src/components/Palette.jsx:81",
+            "quote": "await sleep(38 + Math.random() * 40)"
+          }
+        ]
+      },
+      "hold-open": {
+        "$type": "duration",
+        "$value": "6500ms",
+        "cite": [
+          {
+            "cite": "src/components/Palette.jsx:89",
+            "quote": "await sleep(6500)"
+          }
+        ]
+      },
+      "visibility-threshold": {
+        "$type": "number",
+        "$value": 0.35,
+        "cite": [
+          {
+            "cite": "src/components/Palette.jsx:62",
+            "quote": "{ threshold: 0.35 }"
+          }
+        ]
+      }
+    }
+  }
+}

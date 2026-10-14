@@ -1,0 +1,174 @@
+{
+  "radius": {
+    "pill": {
+      "$type": "dimension",
+      "$value": "9999px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:123",
+          "quote": "v3's is 9999px"
+        }
+      ]
+    },
+    "hero-bottom": {
+      "$type": "dimension",
+      "$value": "3.5rem",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:176",
+          "quote": "`rounded-b-[3.5rem]` (56px bottom radius"
+        }
+      ]
+    },
+    "section-card": {
+      "$type": "dimension",
+      "$value": "2rem",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:446",
+          "quote": "Radius 32px (squircle-clipped)"
+        }
+      ]
+    },
+    "closing-block": {
+      "$type": "dimension",
+      "$value": "1.75rem",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:518",
+          "quote": "radius **28px** (1.75rem)"
+        }
+      ]
+    },
+    "step-card": {
+      "$type": "dimension",
+      "$value": "1.5rem",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:456",
+          "quote": "radius 24px (squircle)"
+        }
+      ]
+    },
+    "item-20": {
+      "$type": "dimension",
+      "$value": "1.25rem",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:495",
+          "quote": "radius 20px (squircle)"
+        }
+      ]
+    },
+    "panel-16": {
+      "$type": "dimension",
+      "$value": "1rem",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:136",
+          "quote": "radius 16px"
+        }
+      ]
+    },
+    "button-009": {
+      "$type": "dimension",
+      "$value": ".9rem",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:159",
+          "quote": "radius .9rem (14.4px)"
+        }
+      ]
+    },
+    "icon-tile-lg": {
+      "$type": "dimension",
+      "$value": "15px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:491",
+          "quote": "radius 15px (13px below)"
+        }
+      ]
+    },
+    "icon-tile-sm": {
+      "$type": "dimension",
+      "$value": "13px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:229",
+          "quote": "radius 13px"
+        }
+      ]
+    },
+    "demo-12": {
+      "$type": "dimension",
+      "$value": "12px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:238",
+          "quote": "radius 12px"
+        }
+      ]
+    },
+    "submit": {
+      "$type": "dimension",
+      "$value": ".7rem",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:218",
+          "quote": "radius .7rem (11.2px)"
+        }
+      ]
+    },
+    "tap-tile": {
+      "$type": "dimension",
+      "$value": "11px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:474",
+          "quote": "radius 11px squircle"
+        }
+      ]
+    },
+    "eyebrow": {
+      "$type": "dimension",
+      "$value": "10px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:193",
+          "quote": "radius 10px"
+        }
+      ]
+    },
+    "chip": {
+      "$type": "dimension",
+      "$value": "8px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:292",
+          "quote": "span.rounded-lg(8px)"
+        }
+      ]
+    },
+    "thumb": {
+      "$type": "dimension",
+      "$value": "6px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:297",
+          "quote": "span thumb (radius 6"
+        }
+      ]
+    },
+    "mark": {
+      "$type": "dimension",
+      "$value": ".23em",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:208",
+          "quote": "border-radius: .23em"
+        }
+      ]
+    }
+  }
+}

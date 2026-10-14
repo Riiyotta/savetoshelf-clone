@@ -1,0 +1,124 @@
+{
+  "spacing": {
+    "2": {
+      "$type": "dimension",
+      "$value": "8px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:113",
+          "quote": "an 8px gutter below 640px"
+        }
+      ]
+    },
+    "3": {
+      "$type": "dimension",
+      "$value": "12px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:113",
+          "quote": "12px gutter left and right"
+        }
+      ]
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": "16px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:237",
+          "quote": "0 16px 16px below 640px"
+        }
+      ]
+    },
+    "5": {
+      "$type": "dimension",
+      "$value": "20px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:200",
+          "quote": "margin-top 20px"
+        }
+      ]
+    },
+    "6": {
+      "$type": "dimension",
+      "$value": "24px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:191",
+          "quote": "64/24/64/24 below 640px"
+        }
+      ]
+    },
+    "8": {
+      "$type": "dimension",
+      "$value": "32px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:212",
+          "quote": "margin-top 32px"
+        }
+      ]
+    },
+    "10": {
+      "$type": "dimension",
+      "$value": "40px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:214",
+          "quote": "margin-top 40px"
+        }
+      ]
+    },
+    "13": {
+      "$type": "dimension",
+      "$value": "3.25rem",
+      "cite": [
+        {
+          "cite": "tailwind.config.cjs:38",
+          "quote": "spacing: { 13: '3.25rem' }"
+        }
+      ]
+    },
+    "14": {
+      "$type": "dimension",
+      "$value": "56px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:449",
+          "quote": "1 column with gap 56"
+        }
+      ]
+    },
+    "20": {
+      "$type": "dimension",
+      "$value": "80px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:449",
+          "quote": "2 columns (536px + 536px) with gap 80"
+        }
+      ]
+    },
+    "24": {
+      "$type": "dimension",
+      "$value": "96px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:447",
+          "quote": "Padding 96px 40px at 640px and up"
+        }
+      ]
+    },
+    "28": {
+      "$type": "dimension",
+      "$value": "112px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:489",
+          "quote": "padding 112px 24px"
+        }
+      ]
+    }
+  }
+}

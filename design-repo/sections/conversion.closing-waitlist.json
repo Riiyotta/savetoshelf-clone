@@ -1,0 +1,126 @@
+{
+  "id": "conversion.closing-waitlist",
+  "kind": "section",
+  "contractVersion": "1.0.0",
+  "category": "conversion",
+  "pageOrder": 8,
+  "purpose": "Closing conversion: three lime squircle blocks; the middle one holds the headline, a muted line and the (unbordered, left-aligned) waitlist form; the side blocks spring their flex-basis when scrolled into view.",
+  "anchorId": null,
+  "variants": [
+    "default"
+  ],
+  "implementedBy": "src/components/Waitlist.jsx",
+  "measuredFrom": [
+    {
+      "cite": "src/components/Waitlist.jsx:27-43",
+      "quote": "data-blocks=\"\""
+    },
+    {
+      "cite": "CLONE_SPEC.md:515-533",
+      "quote": "## 7. Closing waitlist (`section.px-2.sm:px-3`, no id, no top margin)"
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustPrecedeFooter": true
+  },
+  "contentSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "title",
+      "body",
+      "form"
+    ],
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4,
+        "x-realMaxWords": 3
+      },
+      "body": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 23,
+        "x-realMaxWords": 18
+      },
+      "form": {
+        "$ref": "#/definitions/waitlistForm"
+      }
+    }
+  },
+  "motionSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "pattern",
+      "secondary",
+      "reducedMotionFallback"
+    ],
+    "properties": {
+      "pattern": {
+        "enum": [
+          "flex-basis-spring"
+        ]
+      },
+      "secondary": {
+        "const": [
+          "waitlist-done-reveal"
+        ]
+      },
+      "reducedMotionFallback": {
+        "const": "side-blocks-at-final-flex-basis"
+      }
+    }
+  },
+  "motion": {
+    "pattern": "flex-basis-spring",
+    "secondary": [
+      "waitlist-done-reveal"
+    ],
+    "reducedMotionFallback": "side-blocks-at-final-flex-basis",
+    "evidence": [
+      {
+        "cite": "src/index.css:293-304",
+        "quote": "[data-blocks].is-in .side { transition: flex-basis 1.1s var(--ease-bounce); }"
+      },
+      {
+        "cite": "src/components/Waitlist.jsx:12-22",
+        "quote": "{ rootMargin: '0px 0px -15% 0px' }"
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "breakpoint": "breakpoint.lg",
+      "target": ".side",
+      "change": "side blocks visible only at 1024px+ (middle block only below)",
+      "evidence": [
+        {
+          "cite": "src/components/Waitlist.jsx:30",
+          "quote": "side left hidden shrink-0 rounded-[1.75rem] bg-accent lg:block"
+        }
+      ]
+    },
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "middle block",
+      "change": "padding 112/56 at 640px+, 80/32 below; gap 12 (8 below)",
+      "evidence": [
+        {
+          "cite": "src/components/Waitlist.jsx:31",
+          "quote": "px-8 py-20 sm:px-14 sm:py-28"
+        },
+        {
+          "cite": "src/components/Waitlist.jsx:29",
+          "quote": "gap-2 sm:gap-3"
+        }
+      ]
+    }
+  ],
+  "accessibility": "Side blocks aria-hidden. Same form semantics as the hero form.",
+  "notes": [
+    "No id on this section; the nav CTA targets the hero's #waitlist instead."
+  ]
+}

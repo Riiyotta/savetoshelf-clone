@@ -1,0 +1,84 @@
+{
+  "iconSize": {
+    "button-009": {
+      "$type": "dimension",
+      "$value": ".875em",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:159",
+          "quote": "icon .875em (14px)"
+        }
+      ]
+    },
+    "tag": {
+      "$type": "dimension",
+      "$value": "1.15em",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:396",
+          "quote": "Icon size 1.15em."
+        }
+      ]
+    },
+    "faq-plus": {
+      "$type": "dimension",
+      "$value": "16px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:500",
+          "quote": "plus svg 16px"
+        }
+      ]
+    },
+    "eyebrow": {
+      "$type": "dimension",
+      "$value": "18px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:194",
+          "quote": "the spark svg (18×18"
+        }
+      ]
+    },
+    "magnifier": {
+      "$type": "dimension",
+      "$value": "22px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:286",
+          "quote": "svg magnifier 22×22"
+        }
+      ]
+    },
+    "tick": {
+      "$type": "dimension",
+      "$value": "24px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:229",
+          "quote": "tick svg (24px, stroke 2.4)"
+        }
+      ]
+    },
+    "faq-ask": {
+      "$type": "dimension",
+      "$value": "28px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:491",
+          "quote": "ask icon (28px at 640px and up, 24px below)"
+        }
+      ]
+    },
+    "logo": {
+      "$type": "dimension",
+      "$value": "28px",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:141",
+          "quote": "The inline svg is 28×28 (`size-7`)"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "component.step-card",
+  "kind": "component",
+  "contractVersion": "1.0.0",
+  "purpose": "Saving step: visual box + number badge + title + description; row at 640px+, column below.",
+  "implementedBy": "src/components/Saving.jsx",
+  "tokens": [
+    "component.step-card.bg",
+    "component.step-card.radius",
+    "component.step-card.visual-bg"
+  ],
+  "props": [
+    "n",
+    "title",
+    "body",
+    "visual"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Saving.jsx:84-107",
+      "quote": "<ol className=\"space-y-3\">"
+    }
+  ]
+}

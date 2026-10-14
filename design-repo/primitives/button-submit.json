@@ -1,0 +1,32 @@
+{
+  "id": "primitive.button-submit",
+  "kind": "primitive",
+  "contractVersion": "1.0.0",
+  "purpose": "Waitlist submit button; disabled (surface/faint) until the email validates, ink when enabled.",
+  "implementedBy": "src/components/WaitlistForm.jsx",
+  "tokens": [
+    "component.submit-button.bg",
+    "component.submit-button.fg",
+    "component.submit-button.bg-disabled",
+    "component.submit-button.fg-disabled",
+    "component.submit-button.radius"
+  ],
+  "props": [
+    "label",
+    "busyLabel",
+    "disabled"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/WaitlistForm.jsx:87-94",
+      "quote": "disabled={busy || !valid}"
+    },
+    {
+      "cite": "CLONE_SPEC.md:218-221",
+      "quote": "**button[type=submit][data-squircle][disabled]** \"Join waitlist\""
+    }
+  ]
+}

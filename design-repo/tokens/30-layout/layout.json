@@ -1,0 +1,224 @@
+{
+  "layout": {
+    "page": {
+      "max-width": {
+        "$type": "dimension",
+        "$value": "1440px",
+        "cite": [
+          {
+            "cite": "src/components/Hero.jsx:28",
+            "quote": "max-w-[1440px]"
+          }
+        ]
+      },
+      "gutter-sm": {
+        "$type": "dimension",
+        "$value": "12px",
+        "cite": [
+          {
+            "cite": "src/components/Hero.jsx:27",
+            "quote": "px-2 sm:px-3"
+          }
+        ]
+      },
+      "gutter-base": {
+        "$type": "dimension",
+        "$value": "8px",
+        "cite": [
+          {
+            "cite": "src/components/Hero.jsx:27",
+            "quote": "px-2 sm:px-3"
+          }
+        ]
+      }
+    },
+    "nav": {
+      "height-sm": {
+        "$type": "dimension",
+        "$value": "76px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:83",
+            "quote": "76px at 640px and up, 72px below"
+          }
+        ]
+      },
+      "height-base": {
+        "$type": "dimension",
+        "$value": "72px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:83",
+            "quote": "72px below"
+          }
+        ]
+      },
+      "stuck-threshold": {
+        "$type": "dimension",
+        "$value": "12px",
+        "cite": [
+          {
+            "cite": "src/components/Nav.jsx:20",
+            "quote": "window.scrollY > 12"
+          }
+        ]
+      }
+    },
+    "container": {
+      "4xl": {
+        "$type": "dimension",
+        "$value": "896px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:127",
+            "quote": "`max-w-4xl` = 896"
+          }
+        ]
+      },
+      "3xl": {
+        "$type": "dimension",
+        "$value": "768px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:127",
+            "quote": "`max-w-3xl` = 768"
+          }
+        ]
+      },
+      "2xl": {
+        "$type": "dimension",
+        "$value": "672px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:127",
+            "quote": "`max-w-2xl` = 672"
+          }
+        ]
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "576px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:127",
+            "quote": "`max-w-xl` = 576"
+          }
+        ]
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "512px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:127",
+            "quote": "`max-w-lg` = 512"
+          }
+        ]
+      },
+      "6xl": {
+        "$type": "dimension",
+        "$value": "1152px",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:127",
+            "quote": "`max-w-6xl` = 1152"
+          }
+        ]
+      }
+    },
+    "bookmark": {
+      "notch": {
+        "$type": "dimension",
+        "$value": "clamp(96px, 15vw, 220px)",
+        "cite": [
+          {
+            "cite": "src/index.css:178",
+            "quote": "--notch: clamp(96px, 15vw, 220px);"
+          }
+        ]
+      },
+      "notch-narrow": {
+        "$type": "dimension",
+        "$value": "120px",
+        "cite": [
+          {
+            "cite": "src/index.css:185",
+            "quote": "--notch: 120px; --corner: 20px;"
+          }
+        ]
+      },
+      "gap": {
+        "$type": "dimension",
+        "$value": "32px",
+        "cite": [
+          {
+            "cite": "src/index.css:180",
+            "quote": "--gap: 32px;"
+          }
+        ]
+      },
+      "bend": {
+        "$type": "dimension",
+        "$value": "620px",
+        "cite": [
+          {
+            "cite": "src/index.css:181",
+            "quote": "--bend: 620px;"
+          }
+        ]
+      },
+      "corner": {
+        "$type": "dimension",
+        "$value": "56px",
+        "cite": [
+          {
+            "cite": "src/index.css:182",
+            "quote": "--corner: 56px;"
+          }
+        ]
+      },
+      "corner-narrow": {
+        "$type": "dimension",
+        "$value": "20px",
+        "cite": [
+          {
+            "cite": "src/index.css:185",
+            "quote": "--corner: 20px;"
+          }
+        ]
+      },
+      "hold": {
+        "$type": "dimension",
+        "$value": "calc(100svh - var(--notch) - var(--gap))",
+        "cite": [
+          {
+            "cite": "src/index.css:179",
+            "quote": "--hold: calc(100svh - var(--notch) - var(--gap));"
+          }
+        ]
+      }
+    },
+    "demo": {
+      "canvas-width": {
+        "$type": "dimension",
+        "$value": "1440px",
+        "cite": [
+          {
+            "cite": "src/components/HeroMockup.jsx:37",
+            "quote": "scale(${e.clientWidth / 1440})"
+          }
+        ]
+      },
+      "canvas-height": {
+        "$type": "dimension",
+        "$value": "820px",
+        "cite": [
+          {
+            "cite": "src/components/HeroMockup.jsx:54",
+            "quote": "h-[820px] w-[1440px]"
+          }
+        ]
+      }
+    }
+  }
+}

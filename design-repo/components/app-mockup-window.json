@@ -1,0 +1,25 @@
+{
+  "id": "component.app-mockup-window",
+  "kind": "component",
+  "contractVersion": "1.0.0",
+  "purpose": "Fixed 1440x820 fake app canvas scaled by ResizeObserver to its container width.",
+  "implementedBy": "src/components/HeroMockup.jsx",
+  "tokens": [
+    "layout.demo.canvas-width",
+    "layout.demo.canvas-height",
+    "radius.demo-12",
+    "semantic.border.default"
+  ],
+  "props": [
+    "content (hero.demo-mockup)"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/HeroMockup.jsx:32-43",
+      "quote": "const ro = new ResizeObserver(r)"
+    }
+  ]
+}

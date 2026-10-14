@@ -1,0 +1,516 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "purpose": "reference-reconstruction",
+  "template": "template.home",
+  "route": "/",
+  "theme": "light",
+  "meta": {
+    "title": "Shelf: Everything you saved. Finally findable.",
+    "description": "Your personal inspiration library that remembers not just what you saved, but why. Then ask it anything.",
+    "iconSet": {
+      "assetRole": "brand.app-icons"
+    }
+  },
+  "pageMotion": {
+    "smoothScroll": "lenis-lerp-0.1",
+    "anchorOffsetPx": -100,
+    "reducedMotionFallback": "native-scroll"
+  },
+  "nodes": [
+    {
+      "section": "chrome.floating-nav",
+      "variant": "default",
+      "content": {
+        "logo": {
+          "assetRole": "brand.logo-mark",
+          "srLabel": "Shelf",
+          "ariaLabel": "Shelf, home"
+        },
+        "links": [
+          {
+            "label": "Finding",
+            "anchor": "#finding"
+          },
+          {
+            "label": "Saving",
+            "anchor": "#saving"
+          },
+          {
+            "label": "FAQ",
+            "anchor": "#faq"
+          }
+        ],
+        "cta": {
+          "label": "Join waitlist",
+          "href": "#waitlist"
+        }
+      },
+      "motion": {
+        "pattern": "nav-stuck-shrink",
+        "secondary": [
+          "logo-books-tilt",
+          "button-009-arrow-swap"
+        ],
+        "reducedMotionFallback": "instant-stuck-state-no-transition"
+      }
+    },
+    {
+      "section": "hero.intro",
+      "variant": "default",
+      "content": {
+        "eyebrow": {
+          "label": "Bookmarks with a Brain",
+          "iconRole": "icon.ui-glyph"
+        },
+        "headlineLine1": "Everything you saved",
+        "headlineMark": "finally",
+        "headlineTail": "findable",
+        "subhead": "Your personal inspiration library that remembers not just what you saved, but why.",
+        "form": {
+          "inputLabel": "Your email address",
+          "inputPlaceholder": "Enter your email",
+          "submitLabel": "Join waitlist",
+          "busyLabel": "One moment",
+          "doneTitle": "You are on the list",
+          "doneBody": "Check your inbox, a confirmation is on its way.",
+          "errorRetry": "That did not go through. Try again in a moment.",
+          "errorNetwork": "That did not go through. Check your connection and try again.",
+          "submitTarget": "local-stub",
+          "endpointRole": "form.waitlist-endpoint",
+          "endpointPolicy": "must-not-reuse-live-endpoint"
+        }
+      },
+      "motion": {
+        "pattern": "mark-fill-sweep",
+        "secondary": [
+          "spark-twinkle",
+          "waitlist-done-reveal"
+        ],
+        "reducedMotionFallback": "mark-fill-full-sparks-still"
+      }
+    },
+    {
+      "section": "hero.demo-mockup",
+      "variant": "default",
+      "content": {
+        "ariaLabel": "The Shelf app. A sidebar lists collections, sources and tags with the number saved in each. The main panel offers a box to paste a link into and shows recent saves, each with the note written at the time. A search field, opened over the top, takes a question in plain language, shows the filters it read out of that question, and lists the saves that match.",
+        "topBarLogo": {
+          "assetRole": "brand.logo-mark"
+        },
+        "avatarInitial": "S",
+        "sidebarPrimary": [
+          {
+            "label": "Today"
+          },
+          {
+            "label": "My shelf",
+            "count": 128,
+            "active": true
+          },
+          {
+            "label": "Favourites",
+            "count": 14
+          }
+        ],
+        "collectionsHeading": "Collections",
+        "collections": [
+          {
+            "label": "Website redesign",
+            "count": 23
+          },
+          {
+            "label": "Brand refresh",
+            "count": 11
+          },
+          {
+            "label": "New pitch",
+            "count": 38
+          }
+        ],
+        "sourcesHeading": "Source",
+        "sources": [
+          {
+            "label": "LinkedIn",
+            "colorToken": "color.source.linkedin",
+            "count": 41
+          },
+          {
+            "label": "Instagram",
+            "colorToken": "color.source.instagram",
+            "count": 27
+          },
+          {
+            "label": "Web",
+            "colorToken": "color.swatch.web",
+            "count": 60
+          }
+        ],
+        "greeting": "Good morning",
+        "greetingSub": "Nine new saves this week, and four things came back from May.",
+        "pastePrompt": "Paste a link, or drop it here",
+        "pasteShortcut": "⌘V",
+        "recentTitle": "Your last saves",
+        "recentSub": "The most recent, straight from the extension",
+        "cards": [
+          {
+            "sourceLabel": "Web",
+            "day": "Today",
+            "title": "How Linear writes its changelog",
+            "note": "The tone we want for release notes",
+            "thumb": {
+              "assetRole": "mockup.thumbnail-color-block",
+              "colorToken": "color.swatch.ink"
+            }
+          },
+          {
+            "sourceLabel": "Other",
+            "day": "Mon",
+            "title": "Neue Haas Grotesk specimen",
+            "note": "The weights actually worth licensing",
+            "thumb": {
+              "assetRole": "mockup.thumbnail-color-block",
+              "colorToken": "color.surface.sunken"
+            }
+          },
+          {
+            "sourceLabel": "LinkedIn",
+            "day": "Tue",
+            "title": "Why retainers beat project fees",
+            "note": "Saved for the anchoring argument",
+            "thumb": {
+              "assetRole": "mockup.thumbnail-color-block",
+              "colorToken": "color.source.linkedin"
+            }
+          },
+          {
+            "sourceLabel": "Web",
+            "day": "Wed",
+            "title": "Stripe docs, the sidebar pattern",
+            "note": "Three levels deep without getting lost",
+            "thumb": {
+              "assetRole": "mockup.thumbnail-color-block",
+              "colorToken": "color.swatch.steel"
+            }
+          }
+        ],
+        "palette": {
+          "question": "typography I saved about two weeks ago for the redesign",
+          "chips": [
+            {
+              "label": "tag: typography"
+            },
+            {
+              "label": "saved 8 to 20 Aug"
+            },
+            {
+              "label": "Website redesign"
+            }
+          ],
+          "hitsHeading": "My shelf",
+          "hits": [
+            {
+              "title": "Neue Haas Grotesk specimen",
+              "subtitle": "The weights actually worth licensing",
+              "date": "28 Jul",
+              "thumb": {
+                "assetRole": "mockup.thumbnail-color-block",
+                "colorToken": "color.swatch.linen"
+              }
+            },
+            {
+              "title": "Blocky display type on a phone",
+              "subtitle": "Still readable at the smallest size",
+              "date": "4 Aug",
+              "thumb": {
+                "assetRole": "mockup.thumbnail-color-block",
+                "colorToken": "color.swatch.lilac"
+              }
+            },
+            {
+              "title": "Type scale for the redesign",
+              "subtitle": "Two sizes fewer than we have now, cleaner",
+              "date": "11 Aug",
+              "thumb": {
+                "assetRole": "mockup.thumbnail-color-block",
+                "colorToken": "color.swatch.steel"
+              }
+            }
+          ],
+          "totalResults": 12,
+          "enterLabel": "Enter",
+          "hints": [
+            "Enter to see all",
+            "Tab to browse",
+            "Esc to close"
+          ]
+        }
+      },
+      "motion": {
+        "pattern": "static-scaled-canvas",
+        "secondary": [
+          "palette-autotype"
+        ],
+        "reducedMotionFallback": "palette-full-text-chips-hits-no-loop"
+      }
+    },
+    {
+      "section": "story.why-funnel",
+      "variant": "default",
+      "content": {
+        "eyebrow": {
+          "label": "Why Shelf",
+          "iconRole": "icon.ui-glyph"
+        },
+        "title": "You save all over the place",
+        "body": "Every app has its own save button, and none of them talks to the next. What you keep ends up scattered over a dozen of them.",
+        "tags": [
+          {
+            "label": "Instagram",
+            "iconRole": "icon.third-party-brand"
+          },
+          {
+            "label": "LinkedIn",
+            "iconRole": "icon.third-party-brand"
+          },
+          {
+            "label": "Web page",
+            "iconRole": "icon.source-generic"
+          },
+          {
+            "label": "Voice note",
+            "iconRole": "icon.source-generic"
+          },
+          {
+            "label": "Note",
+            "iconRole": "icon.source-generic"
+          },
+          {
+            "label": "Screenshot",
+            "iconRole": "icon.source-generic"
+          },
+          {
+            "label": "PDF",
+            "iconRole": "icon.source-generic"
+          },
+          {
+            "label": "X post",
+            "iconRole": "icon.third-party-brand"
+          },
+          {
+            "label": "YouTube",
+            "iconRole": "icon.third-party-brand"
+          },
+          {
+            "label": "Newsletter",
+            "iconRole": "icon.source-generic"
+          },
+          {
+            "label": "Article",
+            "iconRole": "icon.source-generic"
+          },
+          {
+            "label": "Figma file",
+            "iconRole": "icon.third-party-brand"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "bookmark-clip-scroll",
+        "secondary": [
+          "matter-js-tag-drop",
+          "funnel-reveal-reversible",
+          "ask-wobble"
+        ],
+        "reducedMotionFallback": "tags-placed-on-floor-no-physics"
+      }
+    },
+    {
+      "section": "story.finding",
+      "variant": "default",
+      "content": {
+        "title": "You can find them in one place now",
+        "body": "Shelf catches all twelve of them. Ask in the same words you would use out loud, and it answers with what you saved, and why you saved it.",
+        "palette": {
+          "question": "Every LinkedIn post about Webflow pricing I saved",
+          "chips": [
+            {
+              "label": "source: LinkedIn"
+            },
+            {
+              "label": "topic: pricing"
+            },
+            {
+              "label": "Webflow"
+            }
+          ],
+          "hitsHeading": "My shelf",
+          "hits": [
+            {
+              "title": "Why Webflow's per-site pricing breaks agency retainers",
+              "subtitle": "LinkedIn, saved for the anchoring argument in the client deck",
+              "date": "12 Aug",
+              "thumb": {
+                "assetRole": "mockup.thumbnail-color-block",
+                "colorToken": "color.swatch.sky"
+              }
+            },
+            {
+              "title": "webflow.com/pricing",
+              "subtitle": "Web, saved while comparing the Growth and Agency tiers",
+              "date": "3 Aug",
+              "thumb": {
+                "assetRole": "mockup.thumbnail-color-block",
+                "colorToken": "color.surface.sunken"
+              }
+            }
+          ],
+          "totalResults": 9,
+          "enterLabel": "Enter",
+          "hints": [
+            "Enter to see all",
+            "Tab to browse",
+            "Esc to close"
+          ]
+        }
+      },
+      "motion": {
+        "pattern": "line-grow-text-reveal",
+        "secondary": [
+          "palette-autotype"
+        ],
+        "reducedMotionFallback": "line-and-text-shown-palette-full-no-loop"
+      }
+    },
+    {
+      "section": "story.saving-steps",
+      "variant": "default",
+      "content": {
+        "eyebrow": {
+          "label": "Getting things in",
+          "iconRole": "icon.ui-glyph"
+        },
+        "title": "Save it where you found it.",
+        "paragraphs": [
+          "A button in your browser for the web, the share sheet on your phone. Three seconds, and you are back to what you were doing.",
+          "What you already have comes along too. Your bookmarks and saved posts import in one go, so you are not starting from an empty shelf."
+        ],
+        "steps": [
+          {
+            "title": "You find a gem",
+            "body": "Halfway down a feed, in a message, or an idea that turns up on the walk home.",
+            "visual": "feed-marquee"
+          },
+          {
+            "title": "One tap to save",
+            "body": "The browser button, or Shelf in the share sheet.",
+            "visual": "tap-pulse"
+          },
+          {
+            "title": "One line about why",
+            "body": "Written while it is still in your head. That line is what finds it back.",
+            "visual": "why-caret"
+          }
+        ],
+        "tapMarkRole": "brand.logo-mark",
+        "whyVisual": {
+          "label": "Why this",
+          "note": "The empty state does the teaching"
+        }
+      },
+      "motion": {
+        "pattern": "looping-step-visuals",
+        "secondary": [
+          "feed-marquee",
+          "tap-pulse",
+          "caret-blink"
+        ],
+        "reducedMotionFallback": "feed-tap-caret-animation-none"
+      }
+    },
+    {
+      "section": "support.faq",
+      "variant": "default",
+      "content": {
+        "title": "Before you ask",
+        "intro": "What people want to know before they hand over an archive they spent years building.",
+        "items": [
+          {
+            "question": "Which sources can Shelf pull from?",
+            "answer": "Bookmarks, LinkedIn saved posts, Instagram collections, X bookmarks and any web page you send it. Your own notes count as a source too, often the most useful one, because that is where the why lives."
+          },
+          {
+            "question": "Do I have to tag everything?",
+            "answer": "No. Tagging is the reason most swipe files die. Shelf reads what you saved and takes the note you wrote at the moment you saved it, and that is enough to find it back later."
+          },
+          {
+            "question": "What happens to the archive I already have?",
+            "answer": "You import it. The point of Shelf is not to start a sixth silo. It is to make the five you already have searchable from one field."
+          },
+          {
+            "question": "Who can see what I save?",
+            "answer": "Only you. A swipe file is competitive material, and a private one is the only kind worth keeping."
+          },
+          {
+            "question": "What will it cost?",
+            "answer": "Not settled yet. Shelf is built for people who save professionally, and the price will reflect that rather than chase the free-app crowd. Waitlist members hear it first."
+          },
+          {
+            "question": "When can I use it?",
+            "answer": "Shelf is in private testing. The waitlist is in order, and we widen it as fast as the import can keep up."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "accordion-linear-bounce",
+        "secondary": [
+          "ask-wobble"
+        ],
+        "reducedMotionFallback": "panel-toggles-instantly"
+      }
+    },
+    {
+      "section": "conversion.closing-waitlist",
+      "variant": "default",
+      "content": {
+        "title": "Join the waitlist",
+        "body": "Shelf is in private testing. The list moves in order, and members hear the price before anyone else.",
+        "form": {
+          "inputLabel": "Your email address",
+          "inputPlaceholder": "Enter your email",
+          "submitLabel": "Join waitlist",
+          "busyLabel": "One moment",
+          "doneTitle": "You are on the list",
+          "doneBody": "Check your inbox, a confirmation is on its way.",
+          "errorRetry": "That did not go through. Try again in a moment.",
+          "errorNetwork": "That did not go through. Check your connection and try again.",
+          "submitTarget": "local-stub",
+          "endpointRole": "form.waitlist-endpoint",
+          "endpointPolicy": "must-not-reuse-live-endpoint"
+        }
+      },
+      "motion": {
+        "pattern": "flex-basis-spring",
+        "secondary": [
+          "waitlist-done-reveal"
+        ],
+        "reducedMotionFallback": "side-blocks-at-final-flex-basis"
+      }
+    },
+    {
+      "section": "chrome.footer",
+      "variant": "default",
+      "content": {
+        "logo": {
+          "assetRole": "brand.logo-mark"
+        },
+        "copyright": "© 2026 Shelf. Bookmarks with a Brain. All rights reserved.",
+        "domainLabel": "savetoshelf.com"
+      },
+      "motion": {
+        "pattern": "static",
+        "secondary": [],
+        "reducedMotionFallback": "static-no-motion"
+      }
+    }
+  ]
+}

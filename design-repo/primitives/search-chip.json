@@ -1,0 +1,27 @@
+{
+  "id": "primitive.search-chip",
+  "kind": "primitive",
+  "contractVersion": "1.0.0",
+  "purpose": "Parsed-filter chip in the search palette; the last chip is the active (sunken/ink) one.",
+  "implementedBy": "src/components/Palette.jsx",
+  "tokens": [
+    "component.palette.chip-bg",
+    "component.palette.chip-bg-active",
+    "radius.chip",
+    "typography.fontSize.sm"
+  ],
+  "props": [
+    "label",
+    "active"
+  ],
+  "variants": [
+    "default",
+    "active"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Palette.jsx:145-152",
+      "quote": "i === chips.length - 1 ? 'bg-surface-sunken text-text' : 'bg-surface text-text-muted'"
+    }
+  ]
+}

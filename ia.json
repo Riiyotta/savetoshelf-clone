@@ -1,0 +1,98 @@
+{
+  "$comment": "Built from the live site (https://www.savetoshelf.com/), CLONE_SPEC.md (Playwright recon) and the clone's own src/App.jsx + src/components. Route inventory verified 2026-10-14: no sitemap/robots, 23 common paths probed all 404 (Vercel default NOT_FOUND), and the site's JS references no page routes besides '/'. In-page anchors: #waitlist, #finding, #saving, #faq.",
+  "meta": {
+    "source": "https://www.savetoshelf.com/",
+    "mirror": "React 18 + Vite + Tailwind v3 clone in this folder (original is Astro + Tailwind v4)",
+    "status": "measured-from-live-site",
+    "productionApproved": false,
+    "totalRoutes": 1,
+    "totalTemplates": 1,
+    "generatedBy": "ia-builder skill"
+  },
+  "categories": {
+    "CHROME": "Page frame that sits outside the story: floating navigation and the footer.",
+    "HERO": "Opening, above-the-fold block: the headline pitch and the product demo it introduces.",
+    "STORY": "Scroll-driven narrative explaining the problem and how Shelf finds and saves things.",
+    "SUPPORT": "Objection handling and answers to common questions.",
+    "CONVERSION": "Closing call to action that asks the visitor to join the waitlist."
+  },
+  "sections": {
+    "chrome.floating-nav": {
+      "category": "CHROME",
+      "description": "Fixed, floating pill navigation: Shelf logo (books tip over on hover), anchor links to the in-page sections, and a Join waitlist button with an arrow-swap hover. Shrinks in width and gains a thin ring once the page scrolls past 12px.",
+      "scope": "Present on the only route, the homepage.",
+      "implementedBy": "src/components/Nav.jsx"
+    },
+    "hero.intro": {
+      "category": "HERO",
+      "description": "Headline block: eyebrow pill with twinkling sparks, h1 whose highlighted word gets a green sweep on load, supporting line, and the first waitlist email form (anchor #waitlist). Sits inside the header whose bottom edge is the scroll-driven bookmark shape.",
+      "scope": "Present on the only route, the homepage.",
+      "implementedBy": "src/components/Hero.jsx (+ WaitlistForm.jsx variant=hero, Eyebrow.jsx)"
+    },
+    "hero.demo-mockup": {
+      "category": "HERO",
+      "description": "Non-interactive fake Shelf app UI rendered at a fixed 1440x820 and scaled to the container width, with an auto-typing search palette overlaid on it. Thumbnails are flat CSS colour blocks, not images.",
+      "scope": "Present on the only route, the homepage, directly under the hero intro.",
+      "implementedBy": "src/components/HeroMockup.jsx (+ Palette.jsx)"
+    },
+    "story.why-funnel": {
+      "category": "STORY",
+      "description": "The header's bottom edge flips from an upward chevron into a downward V as you scroll; a sticky 'Why Shelf' title reveals and source-tag pills (Instagram, LinkedIn, PDF, YouTube and others) drop into the V under matter-js physics, then fly back out when scrolling up. Tag landing positions are random each run.",
+      "scope": "Present on the only route, the homepage, as the tail of the hero header.",
+      "implementedBy": "src/components/Funnel.jsx + src/lib/bookmark.js"
+    },
+    "story.finding": {
+      "category": "STORY",
+      "description": "Section #finding: a gradient line grows down from the V's tip, then a heading and line of copy reveal, followed by a second auto-typing search palette that keeps its results shown between loops.",
+      "scope": "Present on the only route, the homepage.",
+      "implementedBy": "src/components/Finding.jsx (+ Palette.jsx keep mode)"
+    },
+    "story.saving-steps": {
+      "category": "STORY",
+      "description": "Section #saving: raised rounded panel, two columns from 1024px up, with an intro on one side and three numbered step cards (find, tap to save, write why), each with its own small looping visual: scrolling feed, tap ripple, blinking caret.",
+      "scope": "Present on the only route, the homepage.",
+      "implementedBy": "src/components/Saving.jsx"
+    },
+    "support.faq": {
+      "category": "SUPPORT",
+      "description": "Section #faq: centred heading with an animated question icon above a six-item accordion. Only one item open at a time; panels open with a springy linear() easing and the plus icon rotates 45 degrees.",
+      "scope": "Present on the only route, the homepage.",
+      "implementedBy": "src/components/Faq.jsx"
+    },
+    "conversion.closing-waitlist": {
+      "category": "CONVERSION",
+      "description": "Closing call to action: three green blocks whose widths spring into place when scrolled into view, with the second waitlist email form in the centre block. The side blocks are hidden below 1024px.",
+      "scope": "Present on the only route, the homepage, directly before the footer.",
+      "implementedBy": "src/components/Waitlist.jsx (+ WaitlistForm.jsx variant=closing)"
+    },
+    "chrome.footer": {
+      "category": "CHROME",
+      "description": "Raised panel with top-only rounded corners sitting under the closing green block: small logo plus copyright line on the left, the plain-text domain (not a link) on the right. Row from 640px up, stacked below.",
+      "scope": "Present on the only route, the homepage.",
+      "implementedBy": "src/components/Footer.jsx"
+    }
+  },
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Homepage (single-page site)",
+      "routeCount": 1,
+      "routes": [
+        "/"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "chrome.floating-nav",
+        "hero.intro",
+        "hero.demo-mockup",
+        "story.why-funnel",
+        "story.finding",
+        "story.saving-steps",
+        "support.faq",
+        "conversion.closing-waitlist",
+        "chrome.footer"
+      ]
+    }
+  ]
+}

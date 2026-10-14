@@ -1,0 +1,30 @@
+{
+  "id": "primitive.icon-tile",
+  "kind": "primitive",
+  "contractVersion": "1.0.0",
+  "purpose": "Accent squircle tile holding an animated glyph (FAQ heading ask icon, waitlist done tick).",
+  "implementedBy": "src/components/Faq.jsx",
+  "tokens": [
+    "semantic.surface.brand",
+    "radius.icon-tile-lg",
+    "radius.icon-tile-sm",
+    "iconSize.faq-ask",
+    "iconSize.tick"
+  ],
+  "props": [
+    "iconRole"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Faq.jsx:35-41",
+      "quote": "rounded-[13px] bg-accent text-text sm:size-13 sm:rounded-[15px]"
+    },
+    {
+      "cite": "src/components/WaitlistForm.jsx:104-106",
+      "quote": "rounded-[13px] bg-accent text-text"
+    }
+  ]
+}

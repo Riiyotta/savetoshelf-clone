@@ -1,0 +1,29 @@
+{
+  "id": "primitive.source-tag-pill",
+  "kind": "primitive",
+  "contractVersion": "1.0.0",
+  "purpose": "Rounded-full source tag (icon 1.15em + label) used as a physics body in the funnel.",
+  "implementedBy": "src/components/Funnel.jsx",
+  "tokens": [
+    "component.tag-pill.bg",
+    "component.tag-pill.border",
+    "component.tag-pill.fg",
+    "component.tag-pill.radius",
+    "iconSize.tag",
+    "typography.fontSize.tag-lg",
+    "typography.fontSize.tag-sm"
+  ],
+  "props": [
+    "label",
+    "iconRole"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Funnel.jsx:63-69",
+      "quote": "data-tag=\"\""
+    }
+  ]
+}

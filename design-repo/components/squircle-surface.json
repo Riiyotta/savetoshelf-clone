@@ -1,0 +1,27 @@
+{
+  "id": "component.squircle-surface",
+  "kind": "component",
+  "contractVersion": "1.0.0",
+  "purpose": "Wrapper that clips any rounded element to a figma-squircle path (smoothing 0.6), recomputed on resize and fonts.ready.",
+  "implementedBy": "src/components/Squircle.jsx",
+  "tokens": [
+    "motion.squircle.corner-smoothing"
+  ],
+  "props": [
+    "as",
+    "smoothing"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Squircle.jsx:8-25",
+      "quote": "preserveSmoothing: false,"
+    },
+    {
+      "cite": "CLONE_SPEC.md:18",
+      "quote": "**figma-squircle** algorithm, inlined"
+    }
+  ]
+}

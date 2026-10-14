@@ -1,0 +1,355 @@
+{
+  "color": {
+    "text": {
+      "default": {
+        "$type": "color",
+        "$value": "#1a1a18",
+        "cite": [
+          {
+            "cite": "src/index.css:13",
+            "quote": "--text: #1a1a18;"
+          }
+        ]
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "#76766e",
+        "cite": [
+          {
+            "cite": "src/index.css:14",
+            "quote": "--text-muted: #76766e;"
+          }
+        ]
+      },
+      "faint": {
+        "$type": "color",
+        "$value": "#a5a59c",
+        "cite": [
+          {
+            "cite": "src/index.css:15",
+            "quote": "--text-faint: #a5a59c;"
+          }
+        ]
+      }
+    },
+    "surface": {
+      "default": {
+        "$type": "color",
+        "$value": "#f2f1ed",
+        "cite": [
+          {
+            "cite": "src/index.css:16",
+            "quote": "--surface: #f2f1ed;"
+          }
+        ]
+      },
+      "raised": {
+        "$type": "color",
+        "$value": "#fcfcfb",
+        "cite": [
+          {
+            "cite": "src/index.css:17",
+            "quote": "--surface-raised: #fcfcfb;"
+          }
+        ]
+      },
+      "sunken": {
+        "$type": "color",
+        "$value": "#e9e8e3",
+        "cite": [
+          {
+            "cite": "src/index.css:18",
+            "quote": "--surface-sunken: #e9e8e3;"
+          }
+        ]
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "color",
+        "$value": "#e1e0da",
+        "cite": [
+          {
+            "cite": "src/index.css:19",
+            "quote": "--border: #e1e0da;"
+          }
+        ]
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "#c6c4bd",
+        "cite": [
+          {
+            "cite": "src/index.css:20",
+            "quote": "--border-strong: #c6c4bd;"
+          }
+        ]
+      }
+    },
+    "accent": {
+      "default": {
+        "$type": "color",
+        "$value": "#9ee86f",
+        "cite": [
+          {
+            "cite": "src/index.css:21",
+            "quote": "--accent: #9ee86f;"
+          }
+        ]
+      }
+    },
+    "source": {
+      "linkedin": {
+        "$type": "color",
+        "$value": "#2d64bc",
+        "cite": [
+          {
+            "cite": "src/index.css:22",
+            "quote": "--source-linkedin: #2d64bc;"
+          }
+        ]
+      },
+      "instagram": {
+        "$type": "color",
+        "$value": "#d6336c",
+        "cite": [
+          {
+            "cite": "src/index.css:23",
+            "quote": "--source-instagram: #d6336c;"
+          }
+        ]
+      },
+      "x": {
+        "$type": "color",
+        "$value": "#1a1a18",
+        "cite": [
+          {
+            "cite": "src/index.css:24",
+            "quote": "--source-x: #1a1a18;"
+          }
+        ]
+      },
+      "note": {
+        "$type": "color",
+        "$value": "#76766e",
+        "cite": [
+          {
+            "cite": "src/index.css:25",
+            "quote": "--source-note: #76766e;"
+          }
+        ]
+      }
+    },
+    "swatch": {
+      "web": {
+        "$type": "color",
+        "$value": "#3fbf4a",
+        "cite": [
+          {
+            "cite": "tailwind.config.cjs:20",
+            "quote": "web: '#3fbf4a'"
+          }
+        ]
+      },
+      "ink": {
+        "$type": "color",
+        "$value": "#1c1c1a",
+        "cite": [
+          {
+            "cite": "tailwind.config.cjs:21",
+            "quote": "ink: '#1c1c1a'"
+          }
+        ]
+      },
+      "mist": {
+        "$type": "color",
+        "$value": "#dfe4ee",
+        "cite": [
+          {
+            "cite": "tailwind.config.cjs:22",
+            "quote": "mist: '#dfe4ee'"
+          }
+        ]
+      },
+      "sand": {
+        "$type": "color",
+        "$value": "#e2ded4",
+        "cite": [
+          {
+            "cite": "tailwind.config.cjs:23",
+            "quote": "sand: '#e2ded4'"
+          }
+        ]
+      },
+      "steel": {
+        "$type": "color",
+        "$value": "#e4e8f2",
+        "cite": [
+          {
+            "cite": "tailwind.config.cjs:24",
+            "quote": "steel: '#e4e8f2'"
+          }
+        ]
+      },
+      "lilac": {
+        "$type": "color",
+        "$value": "#e6e2ec",
+        "cite": [
+          {
+            "cite": "tailwind.config.cjs:25",
+            "quote": "lilac: '#e6e2ec'"
+          }
+        ]
+      },
+      "sky": {
+        "$type": "color",
+        "$value": "#e8effa",
+        "cite": [
+          {
+            "cite": "tailwind.config.cjs:26",
+            "quote": "sky: '#e8effa'"
+          }
+        ]
+      },
+      "linen": {
+        "$type": "color",
+        "$value": "#eae7df",
+        "cite": [
+          {
+            "cite": "tailwind.config.cjs:27",
+            "quote": "linen: '#eae7df'"
+          }
+        ]
+      },
+      "peach": {
+        "$type": "color",
+        "$value": "#efe3d6",
+        "cite": [
+          {
+            "cite": "tailwind.config.cjs:28",
+            "quote": "peach: '#efe3d6'"
+          }
+        ]
+      }
+    },
+    "alpha": {
+      "text-70": {
+        "$type": "color",
+        "$value": "rgba(26,26,24,.7)",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:67",
+            "quote": "`text-text/70` = rgba(26,26,24,.7)"
+          }
+        ]
+      },
+      "surface-raised-45": {
+        "$type": "color",
+        "$value": "rgba(252,252,251,.45)",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:68",
+            "quote": "`bg-surface-raised/45` = rgba(252,252,251,.45)"
+          }
+        ]
+      },
+      "accent-45": {
+        "$type": "color",
+        "$value": "rgba(158,232,111,.45)",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:69",
+            "quote": "`bg-accent/45` = rgba(158,232,111,.45)"
+          }
+        ]
+      },
+      "border-strong-40": {
+        "$type": "color",
+        "$value": "rgba(198,196,189,.4)",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:70",
+            "quote": "`bg-border-strong/40|50|60` = rgba(198,196,189,.4|.5|.6)"
+          }
+        ]
+      },
+      "border-strong-50": {
+        "$type": "color",
+        "$value": "rgba(198,196,189,.5)",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:70",
+            "quote": "rgba(198,196,189,.4|.5|.6)"
+          }
+        ]
+      },
+      "border-strong-60": {
+        "$type": "color",
+        "$value": "rgba(198,196,189,.6)",
+        "cite": [
+          {
+            "cite": "CLONE_SPEC.md:70",
+            "quote": "rgba(198,196,189,.4|.5|.6)"
+          }
+        ]
+      },
+      "nav-ring": {
+        "$type": "color",
+        "$value": "color-mix(in srgb, var(--border) 55%, transparent)",
+        "cite": [
+          {
+            "cite": "src/index.css:59-60",
+            "quote": "box-shadow: 0 0 0 1px color-mix(in srgb, var(--border) 55%, transparent);"
+          }
+        ],
+        "note": "QA correction: interpolates in oklab during the .4s ring fade; resolves to rgba(225,224,218,.55) at rest (CLONE_SPEC.md:71)."
+      }
+    },
+    "third-party-brand": {
+      "instagram": {
+        "$type": "color",
+        "$value": "#FF0069",
+        "cite": [
+          {
+            "cite": "tailwind.config.cjs:31",
+            "quote": "instagram: '#FF0069'"
+          }
+        ],
+        "restricted": "reference-reconstruction-only"
+      },
+      "youtube": {
+        "$type": "color",
+        "$value": "#FF0000",
+        "cite": [
+          {
+            "cite": "tailwind.config.cjs:31",
+            "quote": "youtube: '#FF0000'"
+          }
+        ],
+        "restricted": "reference-reconstruction-only"
+      },
+      "figma": {
+        "$type": "color",
+        "$value": "#F24E1E",
+        "cite": [
+          {
+            "cite": "tailwind.config.cjs:31",
+            "quote": "figma: '#F24E1E'"
+          }
+        ],
+        "restricted": "reference-reconstruction-only"
+      },
+      "x": {
+        "$type": "color",
+        "$value": "#000000",
+        "cite": [
+          {
+            "cite": "tailwind.config.cjs:31",
+            "quote": "x: '#000000'"
+          }
+        ],
+        "restricted": "reference-reconstruction-only"
+      }
+    }
+  }
+}

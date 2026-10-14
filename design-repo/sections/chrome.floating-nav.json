@@ -1,0 +1,209 @@
+{
+  "id": "chrome.floating-nav",
+  "kind": "section",
+  "contractVersion": "1.0.0",
+  "category": "chrome",
+  "pageOrder": 1,
+  "purpose": "Fixed floating nav: logo home link, three in-page anchors and the 'Join waitlist' CTA that jumps to the hero form. Shrinks to a ringed pill once the page scrolls.",
+  "anchorId": null,
+  "variants": [
+    "default"
+  ],
+  "implementedBy": "src/components/Nav.jsx",
+  "measuredFrom": [
+    {
+      "cite": "src/components/Nav.jsx:41-66",
+      "quote": "data-nav=\"\" className=\"fixed inset-x-0 top-0 z-50"
+    },
+    {
+      "cite": "CLONE_SPEC.md:131-168",
+      "quote": "## 2. Nav (`<nav data-nav aria-label=\"Main\">`)"
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true
+  },
+  "contentSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "logo",
+      "links",
+      "cta"
+    ],
+    "properties": {
+      "logo": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "assetRole",
+          "srLabel",
+          "ariaLabel"
+        ],
+        "properties": {
+          "assetRole": {
+            "enum": [
+              "brand.logo-mark",
+              "brand.placeholder-mark"
+            ]
+          },
+          "srLabel": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 2,
+            "x-realMaxWords": 1
+          },
+          "ariaLabel": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 3,
+            "x-realMaxWords": 2
+          }
+        }
+      },
+      "links": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "anchor"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 2,
+              "x-realMaxWords": 1
+            },
+            "anchor": {
+              "enum": [
+                "#finding",
+                "#saving",
+                "#faq"
+              ]
+            }
+          }
+        }
+      },
+      "cta": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "href"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 3,
+            "x-realMaxWords": 2
+          },
+          "href": {
+            "const": "#waitlist"
+          }
+        }
+      }
+    }
+  },
+  "motionSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "pattern",
+      "secondary",
+      "reducedMotionFallback"
+    ],
+    "properties": {
+      "pattern": {
+        "enum": [
+          "nav-stuck-shrink"
+        ]
+      },
+      "secondary": {
+        "const": [
+          "logo-books-tilt",
+          "button-009-arrow-swap"
+        ]
+      },
+      "reducedMotionFallback": {
+        "const": "instant-stuck-state-no-transition"
+      }
+    }
+  },
+  "motion": {
+    "pattern": "nav-stuck-shrink",
+    "secondary": [
+      "logo-books-tilt",
+      "button-009-arrow-swap"
+    ],
+    "reducedMotionFallback": "instant-stuck-state-no-transition",
+    "evidence": [
+      {
+        "cite": "src/index.css:52-62",
+        "quote": "[data-nav].is-stuck [data-nav-bar] {"
+      },
+      {
+        "cite": "src/components/Nav.jsx:20",
+        "quote": "nav.classList.toggle('is-stuck', window.scrollY > 12)"
+      },
+      {
+        "cite": "src/index.css:64-76",
+        "quote": ".logo:hover .book:nth-child(1) { rotate: -54deg; transition-delay: .1s; }"
+      },
+      {
+        "cite": "src/index.css:158-173",
+        "quote": ".button-009:is(:hover,:focus-visible) .button-009__text {"
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "breakpoint": "breakpoint.base",
+      "target": "ul (links)",
+      "change": "nav links hidden below 640px (logo + CTA only, no hamburger)",
+      "evidence": [
+        {
+          "cite": "src/components/Nav.jsx:48",
+          "quote": "hidden items-center gap-4 text-[15px] sm:flex sm:gap-5"
+        },
+        {
+          "cite": "CLONE_SPEC.md:589",
+          "quote": "**hidden** (logo and CTA only; no hamburger)"
+        }
+      ]
+    },
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "nav",
+      "change": "padding 12px 12px 0 (8px below 640px); height 76 (72 below)",
+      "evidence": [
+        {
+          "cite": "src/components/Nav.jsx:41",
+          "quote": "px-2 pt-2 sm:px-3 sm:pt-3"
+        },
+        {
+          "cite": "CLONE_SPEC.md:135",
+          "quote": "padding 12px 12px 0 at 640px and up"
+        }
+      ]
+    },
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "right group",
+      "change": "gap 24px (20px below 640px)",
+      "evidence": [
+        {
+          "cite": "src/components/Nav.jsx:47",
+          "quote": "gap-5 sm:gap-6"
+        }
+      ]
+    }
+  ],
+  "accessibility": "nav[aria-label=Main]; logo link aria-label 'Shelf, home' + sr-only label; CTA is an <a href=#waitlist>."
+}

@@ -1,0 +1,178 @@
+{
+  "id": "hero.intro",
+  "kind": "section",
+  "contractVersion": "1.0.0",
+  "category": "hero",
+  "pageOrder": 2,
+  "purpose": "Hero text block at the top of the bookmark header: sunken eyebrow pill, two-line display h1 with a lime highlight sweeping behind one word, muted subhead and the bordered waitlist form (the #waitlist anchor target).",
+  "anchorId": "waitlist",
+  "variants": [
+    "default"
+  ],
+  "implementedBy": "src/components/Hero.jsx",
+  "measuredFrom": [
+    {
+      "cite": "src/components/Hero.jsx:29-53",
+      "quote": "<section className=\"mx-auto max-w-4xl px-6 pb-16 pt-16 text-center sm:pb-20 sm:pt-24\">"
+    },
+    {
+      "cite": "CLONE_SPEC.md:189-233",
+      "quote": "### 3.1 Hero text section"
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollow": "chrome.floating-nav",
+    "groupedIn": "bookmarkHeader"
+  },
+  "contentSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "eyebrow",
+      "headlineLine1",
+      "headlineMark",
+      "headlineTail",
+      "subhead",
+      "form"
+    ],
+    "properties": {
+      "eyebrow": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "iconRole"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 5,
+            "x-realMaxWords": 4
+          },
+          "iconRole": {
+            "const": "icon.ui-glyph"
+          }
+        }
+      },
+      "headlineLine1": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4,
+        "x-realMaxWords": 3
+      },
+      "headlineMark": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2,
+        "x-realMaxWords": 1
+      },
+      "headlineTail": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2,
+        "x-realMaxWords": 1
+      },
+      "subhead": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 17,
+        "x-realMaxWords": 13
+      },
+      "form": {
+        "$ref": "#/definitions/waitlistForm"
+      }
+    }
+  },
+  "motionSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "pattern",
+      "secondary",
+      "reducedMotionFallback"
+    ],
+    "properties": {
+      "pattern": {
+        "enum": [
+          "mark-fill-sweep"
+        ]
+      },
+      "secondary": {
+        "const": [
+          "spark-twinkle",
+          "waitlist-done-reveal"
+        ]
+      },
+      "reducedMotionFallback": {
+        "const": "mark-fill-full-sparks-still"
+      }
+    }
+  },
+  "motion": {
+    "pattern": "mark-fill-sweep",
+    "secondary": [
+      "spark-twinkle",
+      "waitlist-done-reveal"
+    ],
+    "reducedMotionFallback": "mark-fill-full-sparks-still",
+    "evidence": [
+      {
+        "cite": "src/index.css:190-208",
+        "quote": "animation: sweep .95s cubic-bezier(.625,.05,0,1) .25s forwards;"
+      },
+      {
+        "cite": "src/index.css:210-224",
+        "quote": "[data-waitlist-done].is-in { opacity: 1; translate: 0 0; }"
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "section",
+      "change": "padding 96/24/80 at 640px+, 64/24/64 below",
+      "evidence": [
+        {
+          "cite": "src/components/Hero.jsx:29",
+          "quote": "pb-16 pt-16 text-center sm:pb-20 sm:pt-24"
+        },
+        {
+          "cite": "CLONE_SPEC.md:591",
+          "quote": "hero section padding top / bottom | 96 / 80 | 96 / 80 | 96 / 80 | 64 / 64"
+        }
+      ]
+    },
+    {
+      "breakpoint": "breakpoint.base",
+      "target": "h1",
+      "change": "fluid clamp(2.75rem, 8.5vw, 5.25rem): 84px at 1280+, 65.28px at 768, 44px at 390 (3 lines)",
+      "evidence": [
+        {
+          "cite": "src/components/Hero.jsx:34",
+          "quote": "text-[length:clamp(2.75rem,8.5vw,5.25rem)]"
+        },
+        {
+          "cite": "CLONE_SPEC.md:201",
+          "quote": "44px/44.88px, ls -1.32px at 390"
+        }
+      ]
+    },
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "subhead <br>",
+      "change": "line break after 'remembers' only at 640px+ (3 lines at 390)",
+      "evidence": [
+        {
+          "cite": "src/components/Hero.jsx:47",
+          "quote": "<br className=\"hidden sm:inline\" />"
+        }
+      ]
+    }
+  ],
+  "accessibility": "Single h1 on the page. Form has an sr-only label; done card and note are role=status. Input uses outline-style:none with focus shown via border-color (QA correction 4).",
+  "notes": [
+    "The nav CTA (#waitlist) targets THIS section's form wrapper, not the closing waitlist (which has no id)."
+  ]
+}

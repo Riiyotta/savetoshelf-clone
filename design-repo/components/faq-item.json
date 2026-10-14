@@ -1,0 +1,29 @@
+{
+  "id": "component.faq-item",
+  "kind": "component",
+  "contractVersion": "1.0.0",
+  "purpose": "Squircle accordion item: h3 > button with +/x icon tile, grid-rows 0fr->1fr panel on the bounce spring.",
+  "implementedBy": "src/components/Faq.jsx",
+  "tokens": [
+    "component.faq-item.bg",
+    "component.faq-item.radius",
+    "component.faq-item.icon-bg",
+    "component.faq-item.icon-bg-open",
+    "motion.easing.bounce",
+    "motion.duration.faq-panel"
+  ],
+  "props": [
+    "question",
+    "answer",
+    "open"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/Faq.jsx:52-77",
+      "quote": "aria-controls={`faq-${i}`}"
+    }
+  ]
+}

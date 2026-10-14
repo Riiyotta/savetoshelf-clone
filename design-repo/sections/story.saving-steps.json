@@ -1,0 +1,268 @@
+{
+  "id": "story.saving-steps",
+  "kind": "section",
+  "contractVersion": "1.0.0",
+  "category": "story",
+  "pageOrder": 6,
+  "purpose": "How saving works: accent eyebrow, two-line headline and two paragraphs beside a numbered three-step list, each step with its own looping micro-visual (feed marquee, tap pulse, blinking 'why' caret).",
+  "anchorId": "saving",
+  "variants": [
+    "default"
+  ],
+  "implementedBy": "src/components/Saving.jsx",
+  "measuredFrom": [
+    {
+      "cite": "src/components/Saving.jsx:64-111",
+      "quote": "<section id=\"saving\" className=\"px-2 sm:px-3\">"
+    },
+    {
+      "cite": "CLONE_SPEC.md:443-483",
+      "quote": "## 5. `section#saving`: \"Save it where you found it.\""
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollow": "story.finding"
+  },
+  "contentSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "eyebrow",
+      "title",
+      "paragraphs",
+      "steps",
+      "tapMarkRole",
+      "whyVisual"
+    ],
+    "properties": {
+      "eyebrow": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "iconRole"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 4,
+            "x-realMaxWords": 3
+          },
+          "iconRole": {
+            "const": "icon.ui-glyph"
+          }
+        }
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 8,
+        "x-realMaxWords": 6
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 32,
+          "x-realMaxWords": 25
+        }
+      },
+      "steps": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "additionalItems": false,
+        "items": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "body",
+              "visual"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 5,
+                "x-realMaxWords": 4
+              },
+              "body": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 22,
+                "x-realMaxWords": 17
+              },
+              "visual": {
+                "const": "feed-marquee"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "body",
+              "visual"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 5,
+                "x-realMaxWords": 4
+              },
+              "body": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 22,
+                "x-realMaxWords": 17
+              },
+              "visual": {
+                "const": "tap-pulse"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "body",
+              "visual"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 5,
+                "x-realMaxWords": 4
+              },
+              "body": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 22,
+                "x-realMaxWords": 17
+              },
+              "visual": {
+                "const": "why-caret"
+              }
+            }
+          }
+        ]
+      },
+      "tapMarkRole": {
+        "enum": [
+          "brand.logo-mark",
+          "brand.placeholder-mark"
+        ]
+      },
+      "whyVisual": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "note"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 3,
+            "x-realMaxWords": 2
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 8,
+            "x-realMaxWords": 6
+          }
+        }
+      }
+    }
+  },
+  "motionSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "pattern",
+      "secondary",
+      "reducedMotionFallback"
+    ],
+    "properties": {
+      "pattern": {
+        "enum": [
+          "looping-step-visuals"
+        ]
+      },
+      "secondary": {
+        "const": [
+          "feed-marquee",
+          "tap-pulse",
+          "caret-blink"
+        ]
+      },
+      "reducedMotionFallback": {
+        "const": "feed-tap-caret-animation-none"
+      }
+    }
+  },
+  "motion": {
+    "pattern": "looping-step-visuals",
+    "secondary": [
+      "feed-marquee",
+      "tap-pulse",
+      "caret-blink"
+    ],
+    "reducedMotionFallback": "feed-tap-caret-animation-none",
+    "evidence": [
+      {
+        "cite": "src/index.css:259-280",
+        "quote": ".feed-strip { animation: scroll-feed 9s linear infinite; }"
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "breakpoint": "breakpoint.lg",
+      "target": "grid",
+      "change": "2 columns (536/536, gap 80) at 1024px+, 1 column gap 56 below",
+      "evidence": [
+        {
+          "cite": "src/components/Saving.jsx:68",
+          "quote": "grid max-w-6xl items-center gap-14 lg:grid-cols-2 lg:gap-20"
+        }
+      ]
+    },
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "step li",
+      "change": "row, gap 24, padding 20 at 640px+; column, gap 16, padding 16 below",
+      "evidence": [
+        {
+          "cite": "src/components/Saving.jsx:89",
+          "quote": "flex flex-col items-start gap-4 rounded-[1.5rem] bg-surface p-4 sm:flex-row sm:items-center sm:gap-6 sm:p-5"
+        }
+      ]
+    },
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "card",
+      "change": "padding 96/40 at 640px+, 80/24 below",
+      "evidence": [
+        {
+          "cite": "src/components/Saving.jsx:67",
+          "quote": "px-6 py-20 sm:px-10 sm:py-24"
+        }
+      ]
+    }
+  ],
+  "accessibility": "Ordered list; visuals are aria-hidden; number badges aria-hidden (order conveyed by <ol>)."
+}

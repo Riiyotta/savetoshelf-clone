@@ -1,0 +1,194 @@
+{
+  "version": "1.0.0",
+  "note": "Every rule id below is implemented in schema/semantic_validate.py RULES and vice versa; extraction/verify_all.py fails on any mismatch. Each rule was checked against templates.json template.home at write time.",
+  "rules": [
+    {
+      "id": "SCHEMA_VALID",
+      "severity": "error",
+      "rule": "PageSpec validates against schema/pagespec.schema.json (draft-07).",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_schema",
+      "checkedAgainstTemplates": "n/a"
+    },
+    {
+      "id": "TEMPLATE_DECLARED_AND_ROUTE_BOUND",
+      "severity": "error",
+      "rule": "spec.template exists in templates.json and spec.route is one of that template's routes.",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_template_binding",
+      "checkedAgainstTemplates": "template.home routes ['/'] -> ok"
+    },
+    {
+      "id": "TEMPLATE_SEQUENCE_MATCH",
+      "severity": "error",
+      "rule": "nodes[] must match the declared template's own node list: every required node present, order preserved, non-repeatable not duplicated, no sections outside the template.",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_template_sequence",
+      "checkedAgainstTemplates": "template.home 9 nodes, all required, none repeatable -> ok"
+    },
+    {
+      "id": "ONE_PER_PAGE",
+      "severity": "error",
+      "rule": "Sections with constraints.onePerPage appear at most once, keyed on (section, variant).",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_one_per_page",
+      "checkedAgainstTemplates": "all 9 sections onePerPage; template.home has each once -> ok"
+    },
+    {
+      "id": "NAV_FIRST",
+      "severity": "error",
+      "rule": "chrome.floating-nav is node 0.",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_positions",
+      "checkedAgainstTemplates": "template.home[0] = chrome.floating-nav -> ok"
+    },
+    {
+      "id": "FOOTER_LAST",
+      "severity": "error",
+      "rule": "chrome.footer is the last node.",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_positions",
+      "checkedAgainstTemplates": "template.home[8] = chrome.footer -> ok"
+    },
+    {
+      "id": "ONE_HERO",
+      "severity": "error",
+      "rule": "Exactly one primary hero (hero.intro). hero.demo-mockup shares the 'hero' category (ia.json) but is the demo companion, not a second hero: it is allowed only directly after hero.intro.",
+      "exceptions": [
+        {
+          "section": "hero.demo-mockup",
+          "reason": "ia.json files the demo under HERO; it is the hero's demo companion (same header[data-bookmark]), not a competing hero."
+        }
+      ],
+      "enforcedBy": "semantic_validate.check_one_hero",
+      "checkedAgainstTemplates": "template.home has hero.intro once, hero.demo-mockup at [2] right after it -> ok",
+      "exceptionNote": "No hero-less template exists (single template); add a named exception here AND in semantic_validate.NO_HERO_TEMPLATES if one is ever added."
+    },
+    {
+      "id": "BOOKMARK_HEADER_SEQUENCE",
+      "severity": "error",
+      "rule": "hero.intro, hero.demo-mockup, story.why-funnel appear consecutively in that order right after chrome.floating-nav: they share one header[data-bookmark] clip-path and the tag floor follows its bottom edge.",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_bookmark_header",
+      "checkedAgainstTemplates": "template.home[1..3] -> ok"
+    },
+    {
+      "id": "FINDING_FOLLOWS_BOOKMARK",
+      "severity": "error",
+      "rule": "story.finding immediately follows story.why-funnel: its gradient line grows from the bookmark tip (CLONE_SPEC.md:420).",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_positions",
+      "checkedAgainstTemplates": "template.home[4] after [3] -> ok"
+    },
+    {
+      "id": "WAITLIST_PRECEDES_FOOTER",
+      "severity": "error",
+      "rule": "conversion.closing-waitlist immediately precedes chrome.footer (footer sits directly under the green block, CLONE_SPEC.md:539).",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_positions",
+      "checkedAgainstTemplates": "template.home[7] before [8] -> ok"
+    },
+    {
+      "id": "NAV_ANCHORS_RESOLVE",
+      "severity": "error",
+      "rule": "Every chrome.floating-nav link anchor (#id) matches the anchorId of a section present in the spec.",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_anchors",
+      "checkedAgainstTemplates": "#finding/#saving/#faq -> story.finding/story.saving-steps/support.faq -> ok"
+    },
+    {
+      "id": "NAV_CTA_TARGETS_HERO_WAITLIST",
+      "severity": "error",
+      "rule": "The nav CTA href #waitlist resolves to hero.intro (anchorId 'waitlist'); the closing waitlist has no id.",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_anchors",
+      "checkedAgainstTemplates": "hero present -> ok"
+    },
+    {
+      "id": "NO_ADJACENT_SAME_CATEGORY",
+      "severity": "warn",
+      "rule": "Two adjacent nodes should not share a category.",
+      "exceptions": [
+        {
+          "pair": [
+            "hero.intro",
+            "hero.demo-mockup"
+          ],
+          "reason": "Both HERO in ia.json; real adjacency: the demo sits directly under the hero text inside the same header (CLONE_SPEC.md:102-103)."
+        },
+        {
+          "pair": [
+            "story.why-funnel",
+            "story.finding"
+          ],
+          "reason": "Both STORY; real adjacency: the finding line grows from the bookmark tip (CLONE_SPEC.md:420)."
+        },
+        {
+          "pair": [
+            "story.finding",
+            "story.saving-steps"
+          ],
+          "reason": "Both STORY; real adjacency: 'find' then 'save' are the two halves of the product story; finding sits on the page surface, saving on a raised squircle card."
+        }
+      ],
+      "enforcedBy": "semantic_validate.check_rhythm",
+      "checkedAgainstTemplates": "template.home has 3 same-category adjacencies (hero->hero, story->story x2): all covered by named exceptions"
+    },
+    {
+      "id": "REDUCED_MOTION_FALLBACK_REQUIRED",
+      "severity": "error",
+      "rule": "Every node's motion carries reducedMotionFallback (the site honours prefers-reduced-motion: animations none / transitions 0s).",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_motion",
+      "checkedAgainstTemplates": "n/a"
+    },
+    {
+      "id": "SIGNATURE_MOTION_LOCKED",
+      "severity": "error",
+      "rule": "Each node's motion.pattern / secondary / reducedMotionFallback equals its section contract's (const-locked); signature motion must not silently degrade to a generic fade.",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_motion",
+      "checkedAgainstTemplates": "n/a"
+    },
+    {
+      "id": "MAX_WORDS",
+      "severity": "error",
+      "rule": "Every text field respects its x-maxWords budget (per instance, resolved through $ref).",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_max_words",
+      "checkedAgainstTemplates": "n/a"
+    },
+    {
+      "id": "COLOR_TOKEN_IN_CATALOG",
+      "severity": "error",
+      "rule": "Every colorToken in the spec exists in tokens/llm/token-catalog.json and is not restricted.",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_color_tokens",
+      "checkedAgainstTemplates": "n/a"
+    },
+    {
+      "id": "ENDPOINT_POLICY_PINNED",
+      "severity": "error",
+      "rule": "Every waitlist form's endpointPolicy equals the pinned value of its endpointRole in assets/asset-roles.json (form.waitlist-endpoint -> must-not-reuse-live-endpoint). Membership in the policy enum alone is not sufficient (MASTER-GUIDE 3.23).",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_endpoint_policy",
+      "checkedAgainstTemplates": "n/a"
+    },
+    {
+      "id": "GENERATED_NO_REAL_BRAND_ASSETS",
+      "severity": "error",
+      "rule": "When purpose == 'generated', no assetRole/iconRole/tapMarkRole may reference a role pinned to must-not-reproduce-real-brand (Shelf logo, app icons, third-party brand icons).",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_generated_brand",
+      "checkedAgainstTemplates": "n/a"
+    },
+    {
+      "id": "GENERATED_NO_REAL_BRAND_TEXT",
+      "severity": "warn",
+      "rule": "When purpose == 'generated', copy should not contain the real company's name/domain ('Shelf', 'savetoshelf').",
+      "exceptions": [],
+      "enforcedBy": "semantic_validate.check_generated_brand",
+      "checkedAgainstTemplates": "n/a"
+    }
+  ]
+}

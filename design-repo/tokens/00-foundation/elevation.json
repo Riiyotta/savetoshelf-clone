@@ -1,0 +1,44 @@
+{
+  "elevation": {
+    "palette": {
+      "$type": "shadow",
+      "$value": "0 18px 50px -24px rgba(26,26,24,.22)",
+      "cite": [
+        {
+          "cite": "tailwind.config.cjs:47",
+          "quote": "palette: '0 18px 50px -24px rgba(26,26,24,0.22)'"
+        }
+      ]
+    },
+    "nav-stuck-ring": {
+      "$type": "shadow",
+      "$value": "0 0 0 1px color-mix(in srgb, var(--border) 55%, transparent)",
+      "cite": [
+        {
+          "cite": "src/index.css:60",
+          "quote": "box-shadow: 0 0 0 1px color-mix(in srgb, var(--border) 55%, transparent);"
+        }
+      ]
+    },
+    "button-focus-ring": {
+      "$type": "shadow",
+      "$value": "0 0 0 .125em #1a1a18",
+      "cite": [
+        {
+          "cite": "src/index.css:121",
+          "quote": "box-shadow: 0 0 0 .125em var(--button-009-color-focus)"
+        }
+      ]
+    },
+    "closing-form-focus": {
+      "$type": "shadow",
+      "$value": "0 0 0 1px rgba(26,26,24,.6)",
+      "cite": [
+        {
+          "cite": "CLONE_SPEC.md:533",
+          "quote": "focus-within: box-shadow 0 0 0 1px rgba(26,26,24,.6)"
+        }
+      ]
+    }
+  }
+}

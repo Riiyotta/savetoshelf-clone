@@ -1,0 +1,25 @@
+{
+  "id": "primitive.input-email",
+  "kind": "primitive",
+  "contractVersion": "1.0.0",
+  "purpose": "Transparent email input inside the waitlist form; focus shown by the form border/ring, input itself outline-style:none (QA correction 4).",
+  "implementedBy": "src/components/WaitlistForm.jsx",
+  "tokens": [
+    "semantic.text.tertiary",
+    "typography.fontSize.base"
+  ],
+  "props": [
+    "placeholder",
+    "label"
+  ],
+  "variants": [
+    "default"
+  ],
+  "evidence": [
+    {
+      "cite": "src/components/WaitlistForm.jsx:76-86",
+      "quote": "focus:[outline-style:none]"
+    }
+  ],
+  "accessibility": "sr-only <label> 'Your email address'."
+}

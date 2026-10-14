@@ -1,0 +1,154 @@
+{
+  "id": "support.faq",
+  "kind": "section",
+  "contractVersion": "1.0.0",
+  "category": "support",
+  "pageOrder": 7,
+  "purpose": "Objection handling: accent ask-icon tile + heading, intro line, six single-open accordion items whose panels open with a linear() spring.",
+  "anchorId": "faq",
+  "variants": [
+    "default"
+  ],
+  "implementedBy": "src/components/Faq.jsx",
+  "measuredFrom": [
+    {
+      "cite": "src/components/Faq.jsx:28-83",
+      "quote": "<section id=\"faq\" className=\"faq mx-auto max-w-3xl px-6 py-20 sm:py-28\">"
+    },
+    {
+      "cite": "CLONE_SPEC.md:487-511",
+      "quote": "## 6. `section#faq`: \"Before you ask\""
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollow": "story.saving-steps"
+  },
+  "contentSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "title",
+      "intro",
+      "items"
+    ],
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4,
+        "x-realMaxWords": 3
+      },
+      "intro": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 19,
+        "x-realMaxWords": 15
+      },
+      "items": {
+        "type": "array",
+        "minItems": 6,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "question",
+            "answer"
+          ],
+          "properties": {
+            "question": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 10,
+              "x-realMaxWords": 8
+            },
+            "answer": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 44,
+              "x-realMaxWords": 35
+            }
+          }
+        }
+      }
+    }
+  },
+  "motionSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "pattern",
+      "secondary",
+      "reducedMotionFallback"
+    ],
+    "properties": {
+      "pattern": {
+        "enum": [
+          "accordion-linear-bounce"
+        ]
+      },
+      "secondary": {
+        "const": [
+          "ask-wobble"
+        ]
+      },
+      "reducedMotionFallback": {
+        "const": "panel-toggles-instantly"
+      }
+    }
+  },
+  "motion": {
+    "pattern": "accordion-linear-bounce",
+    "secondary": [
+      "ask-wobble"
+    ],
+    "reducedMotionFallback": "panel-toggles-instantly",
+    "evidence": [
+      {
+        "cite": "src/index.css:282-291",
+        "quote": ".faq .panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .75s var(--ease-bounce); }"
+      },
+      {
+        "cite": "src/components/Faq.jsx:29-30",
+        "quote": "at most one open"
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "section",
+      "change": "padding 112px vertical at 640px+, 80px below",
+      "evidence": [
+        {
+          "cite": "src/components/Faq.jsx:33",
+          "quote": "py-20 sm:py-28"
+        }
+      ]
+    },
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "question button",
+      "change": "18px text, pl 32 at 640px+; 16px, pl 24 below",
+      "evidence": [
+        {
+          "cite": "src/components/Faq.jsx:60",
+          "quote": "sm:pl-8 sm:text-lg"
+        }
+      ]
+    },
+    {
+      "breakpoint": "breakpoint.sm",
+      "target": "heading tile",
+      "change": "52x52 r15 at 640px+, 44x44 r13 below",
+      "evidence": [
+        {
+          "cite": "src/components/Faq.jsx:37",
+          "quote": "size-11 shrink-0 place-items-center rounded-[13px] bg-accent text-text sm:size-13 sm:rounded-[15px]"
+        }
+      ]
+    }
+  ],
+  "accessibility": "Each question is an h3 > button with aria-expanded and aria-controls=faq-N."
+}
