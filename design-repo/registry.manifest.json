@@ -1,6 +1,6 @@
 {
   "repositoryId": "savetoshelf-home-design-repo",
-  "repositoryVersion": "1.0.0",
+  "repositoryVersion": "1.0.1",
   "pageSpecVersion": "1.0.0",
   "allowlistVersion": "1.0.0",
   "versionFieldNote": "allowlistVersion is MACHINE-CHECKED: extraction/verify_all.py fails if it differs from tokens/llm/component-allowlist.json 'version' (proven by extraction/prove_drift.py). repositoryVersion is documentation-only and hand-maintained; nothing checks it. pageSpecVersion is documentation-only here, except that schema/pagespec.schema.json pins PageSpec.pageSpecVersion with a const (so a PageSpec cannot claim another version).",
@@ -25,7 +25,7 @@
       "figma-squircle": "1.1.0"
     },
     "cloneStackNote": "Resolved versions from node_modules at build time; package.json declares ^18.3.1 / ^5.4.10 / ^3.4.14 / ^1.3.26 / ^0.20.0 / ^1.1.0 (cited in extraction/measured-values.json).",
-    "isGitRepository": false,
+    "isGitRepository": true,
     "idsFrom": "ia.json (sibling, ia-builder skill): section ids, categories and template id are used verbatim"
   },
   "defaultTheme": "light",
@@ -71,5 +71,5 @@
     "driftProof": "extraction/prove_drift.py"
   },
   "entryPointsNote": "Every entry point is inside design-repo/. External evidence (CLONE_SPEC.md, ia.json, src/, the saved original snapshot) is cited only from extraction/measured-values.json and contract 'cite' objects, which degrade to WARN when the sibling tree is absent.",
-  "packaging": "design-repo.zip (sibling of this folder, never inside it) is regenerated with the CLI zip, last, after verification. The project is not a git repo; if it is ever put under git, list design-repo.zip in .gitignore by name."
+  "packaging": "design-repo.zip (sibling of this folder, never inside it) is regenerated with the CLI zip, last, after verification. The project is a git repo (private GitHub remote); design-repo.zip is listed by name in the project .gitignore and is not tracked (git ls-files)."
 }

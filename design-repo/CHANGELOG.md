@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.0.1 — 2026-10-14 (recheck pass)
+
+allowlistVersion 1.0.0 · repositoryVersion 1.0.1 · pageSpecVersion 1.0.0
+
+- Independent recheck (BUILD-GUIDE §4). The only defect found was a stale fact: the project was put under git and pushed
+  after the build, but `registry.manifest.json` still said `isGitRepository: false` and "not a git repo".
+  Both fields were corrected; `design-repo.zip` is confirmed listed in `.gitignore` and untracked.
+- Re-verified with checks written independently of the build: 16 new mutations (template sequence, route
+  binding, one-per-page, footer position, motion locks, pinned endpoint, asset roles, real-brand guard)
+  all rejected for the right rule; 136 maxWords fields recounted, none over; 9/9 example nodes carry every
+  required field; 7 random citations hand-checked against the quoted lines.
+
 ## 1.0.0 — 2026-10-14 (initial build)
 
 allowlistVersion 1.0.0 · repositoryVersion 1.0.0 · pageSpecVersion 1.0.0
